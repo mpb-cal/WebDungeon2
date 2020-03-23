@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Web Dungeon 2</title>
+    <link rel='stylesheet' href='normalize.min.css' type='text/css' media='all'>
+		<style>
+      body { font-family: sans-serif; }
+      form {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      form input { width: 100%; }
+
+      #roomDescription { background-color: #fff; }
+      #items { background-color: #eae; }
+      #messages {
+        background-color: #eee;
+        width: 100%;
+        height: 100%;
+      }
+		</style>
+	</head>
+
+	<body>
+		<div id="messages"></div>
+
+		<form action="">
+			<input id="m" autocomplete="off" />
+		</form>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="messages.js"></script>
+		<script src="client.js"></script>
+	</body>
+</html>
+

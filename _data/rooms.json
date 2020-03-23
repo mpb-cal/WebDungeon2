@@ -1,0 +1,6822 @@
+[
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #A050C8; \"> (Location 1)</span>",
+   "items": [
+    "dagger_1"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A054C8; \"> (Location 22)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A058C8; \"> (Location 43)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A05CC8; \"> (Location 64)</span>",
+   "items": [
+    "shield_64"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A060C8; \"> (Location 85)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A064C8; \"> (Location 106)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A068C8; \"> (Location 127)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A06CC8; \"> (Location 148)</span>",
+   "items": [
+    "scroll_148"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A070C8; \"> (Location 169)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A074C8; \"> (Location 190)</span>",
+   "items": [
+    "shield_190"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A078C8; \">Northern Wilderness. (Location 211)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A07CC8; \">Northern Wilderness. (Location 232)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A080C8; \">Northern Wilderness. (Location 253)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A084C8; \">Northern Wilderness. (Location 274)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A088C8; \">Northern Wilderness. (Location 295)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A08CC8; \">Northern Wilderness. (Location 316)</span>",
+   "items": [
+    "scroll_316",
+    "shield_316",
+    "dagger_316"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A090C8; \">Northern Wilderness. (Location 337)</span>",
+   "items": [
+    "gold_337"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A094C8; \">Northern Wilderness. (Location 358)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A098C8; \">Northern Wilderness. (Location 379)</span>",
+   "items": [
+    "gold_379",
+    "dagger_379"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A09CC8; \">Northern Wilderness. (Location 400)</span>",
+   "items": [
+    "shield_400"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0A0C8; \">Northern Wall. (Location 421)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0A4C8; \"> (Location 442)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0A8C8; \"> (Location 463)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0ACC8; \"> (Location 484)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0B0C8; \"> (Location 505)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0B4C8; \"> (Location 526)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0B8C8; \"> (Location 547)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0BCC8; \"> (Location 568)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0C0C8; \"> (Location 589)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0C4C8; \"> (Location 610)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0C8C8; \"> (Location 631)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0CCC8; \"> (Location 652)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0D0C8; \"> (Location 673)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0D4C8; \"> (Location 694)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0D8C8; \"> (Location 715)</span>",
+   "items": [
+    "scroll_715",
+    "dagger_715"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0DCC8; \"> (Location 736)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0E0C8; \"> (Location 757)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0E4C8; \"> (Location 778)</span>",
+   "items": [
+    "dagger_778"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0E8C8; \"> (Location 799)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0ECC8; \"> (Location 820)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A0F0C8; \"> (Location 841)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #A450C8; \"> (Location 2)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A454C8; \"> (Location 23)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A458C8; \"> (Location 44)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A45CC8; \"> (Location 65)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A460C8; \"> (Location 86)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A464C8; \"> (Location 107)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A468C8; \"> (Location 128)</span>",
+   "items": [
+    "scroll_128"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A46CC8; \"> (Location 149)</span>",
+   "items": [
+    "dagger_149"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A470C8; \"> (Location 170)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A474C8; \"> (Location 191)</span>",
+   "items": [
+    "gold_191",
+    "dagger_191"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A478C8; \">Northern Wilderness. (Location 212)</span>",
+   "items": [
+    "gold_212"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A47CC8; \">Northern Wilderness. (Location 233)</span>",
+   "items": [
+    "gold_233"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A480C8; \">Northern Wilderness. (Location 254)</span>",
+   "items": [
+    "shield_254"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A484C8; \">Northern Wilderness. (Location 275)</span>",
+   "items": [
+    "dagger_275"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A488C8; \">Northern Wilderness. (Location 296)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A48CC8; \">Northern Wilderness. (Location 317)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A490C8; \">Northern Wilderness. (Location 338)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A494C8; \">Northern Wilderness. (Location 359)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A498C8; \">Northern Wilderness. (Location 380)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A49CC8; \">Northern Wilderness. (Location 401)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4A0C8; \">Northern Wall. (Location 422)</span>",
+   "items": [
+    "dagger_422"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4A4C8; \"> (Location 443)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4A8C8; \"> (Location 464)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4ACC8; \"> (Location 485)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4B0C8; \"> (Location 506)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4B4C8; \"> (Location 527)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4B8C8; \"> (Location 548)</span>",
+   "items": [
+    "shield_548"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4BCC8; \"> (Location 569)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4C0C8; \"> (Location 590)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4C4C8; \"> (Location 611)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4C8C8; \"> (Location 632)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4CCC8; \"> (Location 653)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4D0C8; \"> (Location 674)</span>",
+   "items": [
+    "gold_674"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4D4C8; \"> (Location 695)</span>",
+   "items": [
+    "shield_695"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4D8C8; \"> (Location 716)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4DCC8; \"> (Location 737)</span>",
+   "items": [
+    "shield_737"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4E0C8; \"> (Location 758)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4E4C8; \"> (Location 779)</span>",
+   "items": [
+    "shield_779",
+    "dagger_779"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4E8C8; \"> (Location 800)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4ECC8; \"> (Location 821)</span>",
+   "items": [
+    "gold_821"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A4F0C8; \"> (Location 842)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #A850C8; \"> (Location 3)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A854C8; \"> (Location 24)</span>",
+   "items": [
+    "shield_24"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A858C8; \"> (Location 45)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A85CC8; \"> (Location 66)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A860C8; \"> (Location 87)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A864C8; \"> (Location 108)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A868C8; \"> (Location 129)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A86CC8; \"> (Location 150)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A870C8; \"> (Location 171)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A874C8; \"> (Location 192)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A878C8; \">Northern Wilderness. (Location 213)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A87CC8; \">Northern Wilderness. (Location 234)</span>",
+   "items": [
+    "shield_234"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A880C8; \">Northern Wilderness. (Location 255)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A884C8; \">Northern Wilderness. (Location 276)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A888C8; \">Northern Wilderness. (Location 297)</span>",
+   "items": [
+    "scroll_297"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A88CC8; \">Northern Wilderness. (Location 318)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A890C8; \">Northern Wilderness. (Location 339)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A894C8; \">Northern Wilderness. (Location 360)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A898C8; \">Northern Wilderness. (Location 381)</span>",
+   "items": [
+    "scroll_381",
+    "dagger_381"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A89CC8; \">Northern Wilderness. (Location 402)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8A0C8; \">Northern Wall. (Location 423)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8A4C8; \"> (Location 444)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8A8C8; \"> (Location 465)</span>",
+   "items": [
+    "shield_465"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8ACC8; \"> (Location 486)</span>",
+   "items": [
+    "gold_486",
+    "dagger_486"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8B0C8; \"> (Location 507)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8B4C8; \"> (Location 528)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8B8C8; \"> (Location 549)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8BCC8; \"> (Location 570)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8C0C8; \"> (Location 591)</span>",
+   "items": [
+    "scroll_591"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8C4C8; \"> (Location 612)</span>",
+   "items": [
+    "scroll_612"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8C8C8; \"> (Location 633)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8CCC8; \"> (Location 654)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8D0C8; \"> (Location 675)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8D4C8; \"> (Location 696)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8D8C8; \"> (Location 717)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8DCC8; \"> (Location 738)</span>",
+   "items": [
+    "shield_738"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8E0C8; \"> (Location 759)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8E4C8; \"> (Location 780)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8E8C8; \"> (Location 801)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8ECC8; \"> (Location 822)</span>",
+   "items": [
+    "scroll_822"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #A8F0C8; \"> (Location 843)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #AC50C8; \"> (Location 4)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC54C8; \"> (Location 25)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC58C8; \"> (Location 46)</span>",
+   "items": [
+    "shield_46"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC5CC8; \"> (Location 67)</span>",
+   "items": [
+    "gold_67"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC60C8; \"> (Location 88)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC64C8; \"> (Location 109)</span>",
+   "items": [
+    "scroll_109"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC68C8; \"> (Location 130)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC6CC8; \"> (Location 151)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC70C8; \"> (Location 172)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC74C8; \"> (Location 193)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC78C8; \">Northern Wilderness. (Location 214)</span>",
+   "items": [
+    "gold_214"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC7CC8; \">Northern Wilderness. (Location 235)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC80C8; \">Northern Wilderness. (Location 256)</span>",
+   "items": [
+    "scroll_256"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC84C8; \">Northern Wilderness. (Location 277)</span>",
+   "items": [
+    "gold_277",
+    "shield_277"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC88C8; \">Northern Wilderness. (Location 298)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC8CC8; \">Northern Wilderness. (Location 319)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC90C8; \">Northern Wilderness. (Location 340)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC94C8; \">Northern Wilderness. (Location 361)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC98C8; \">Northern Wilderness. (Location 382)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #AC9CC8; \">Northern Wilderness. (Location 403)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACA0C8; \">Northern Wall. (Location 424)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACA4C8; \"> (Location 445)</span>",
+   "items": [
+    "shield_445"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACA8C8; \"> (Location 466)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACACC8; \"> (Location 487)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACB0C8; \"> (Location 508)</span>",
+   "items": [
+    "gold_508"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACB4C8; \"> (Location 529)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACB8C8; \"> (Location 550)</span>",
+   "items": [
+    "dagger_550"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACBCC8; \"> (Location 571)</span>",
+   "items": [
+    "gold_571"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACC0C8; \"> (Location 592)</span>",
+   "items": [
+    "shield_592"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACC4C8; \"> (Location 613)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACC8C8; \"> (Location 634)</span>",
+   "items": [
+    "gold_634"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACCCC8; \"> (Location 655)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACD0C8; \"> (Location 676)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACD4C8; \"> (Location 697)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACD8C8; \"> (Location 718)</span>",
+   "items": [
+    "gold_718"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACDCC8; \"> (Location 739)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACE0C8; \"> (Location 760)</span>",
+   "items": [
+    "gold_760",
+    "scroll_760"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACE4C8; \"> (Location 781)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACE8C8; \"> (Location 802)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACECC8; \"> (Location 823)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ACF0C8; \"> (Location 844)</span>",
+   "items": [
+    "gold_844"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #B050C8; \"> (Location 5)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B054C8; \"> (Location 26)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B058C8; \"> (Location 47)</span>",
+   "items": [
+    "dagger_47"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B05CC8; \"> (Location 68)</span>",
+   "items": [
+    "gold_68",
+    "shield_68"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B060C8; \"> (Location 89)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B064C8; \"> (Location 110)</span>",
+   "items": [
+    "shield_110"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B068C8; \"> (Location 131)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B06CC8; \"> (Location 152)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B070C8; \"> (Location 173)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B074C8; \"> (Location 194)</span>",
+   "items": [
+    "gold_194"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B078C8; \">Northern Wilderness. (Location 215)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B07CC8; \">Northern Wilderness. (Location 236)</span>",
+   "items": [
+    "dagger_236"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B080C8; \">Northern Wilderness. (Location 257)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B084C8; \">Northern Wilderness. (Location 278)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B088C8; \">Northern Wilderness. (Location 299)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B08CC8; \">Northern Wilderness. (Location 320)</span>",
+   "items": [
+    "scroll_320",
+    "shield_320"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B090C8; \">Northern Wilderness. (Location 341)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B094C8; \">Northern Wilderness. (Location 362)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B098C8; \">Northern Wilderness. (Location 383)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B09CC8; \">Northern Wilderness. (Location 404)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0A0C8; \">Northern Wall. (Location 425)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0A4C8; \"> (Location 446)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0A8C8; \"> (Location 467)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0ACC8; \"> (Location 488)</span>",
+   "items": [
+    "gold_488",
+    "shield_488"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0B0C8; \"> (Location 509)</span>",
+   "items": [
+    "gold_509",
+    "scroll_509"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0B4C8; \"> (Location 530)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0B8C8; \"> (Location 551)</span>",
+   "items": [
+    "scroll_551",
+    "dagger_551"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0BCC8; \"> (Location 572)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0C0C8; \"> (Location 593)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0C4C8; \"> (Location 614)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0C8C8; \"> (Location 635)</span>",
+   "items": [
+    "scroll_635"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0CCC8; \"> (Location 656)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0D0C8; \"> (Location 677)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0D4C8; \"> (Location 698)</span>",
+   "items": [
+    "shield_698"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0D8C8; \"> (Location 719)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0DCC8; \"> (Location 740)</span>",
+   "items": [
+    "gold_740"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0E0C8; \"> (Location 761)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0E4C8; \"> (Location 782)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0E8C8; \"> (Location 803)</span>",
+   "items": [
+    "dagger_803"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0ECC8; \"> (Location 824)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B0F0C8; \"> (Location 845)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #B450C8; \"> (Location 6)</span>",
+   "items": [
+    "shield_6"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B454C8; \"> (Location 27)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B458C8; \"> (Location 48)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B45CC8; \"> (Location 69)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B460C8; \"> (Location 90)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B464C8; \"> (Location 111)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B468C8; \"> (Location 132)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B46CC8; \"> (Location 153)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B470C8; \"> (Location 174)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B474C8; \"> (Location 195)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B478C8; \">Northern Wilderness. (Location 216)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B47CC8; \">Northern Wilderness. (Location 237)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B480C8; \">Northern Wilderness. (Location 258)</span>",
+   "items": [
+    "shield_258",
+    "dagger_258"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B484C8; \">Northern Wilderness. (Location 279)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B488C8; \">Northern Wilderness. (Location 300)</span>",
+   "items": [
+    "gold_300"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B48CC8; \">Northern Wilderness. (Location 321)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B490C8; \">Northern Wilderness. (Location 342)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B494C8; \">Northern Wilderness. (Location 363)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B498C8; \">Northern Wilderness. (Location 384)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B49CC8; \">Northern Wilderness. (Location 405)</span>",
+   "items": [
+    "shield_405"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4A0C8; \">Northern Wall. (Location 426)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4A4C8; \"> (Location 447)</span>",
+   "items": [
+    "scroll_447"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4A8C8; \"> (Location 468)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4ACC8; \"> (Location 489)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4B0C8; \"> (Location 510)</span>",
+   "items": [
+    "gold_510"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4B4C8; \"> (Location 531)</span>",
+   "items": [
+    "shield_531"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4B8C8; \"> (Location 552)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4BCC8; \"> (Location 573)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4C0C8; \"> (Location 594)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4C4C8; \"> (Location 615)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4C8C8; \"> (Location 636)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4CCC8; \"> (Location 657)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4D0C8; \"> (Location 678)</span>",
+   "items": [
+    "shield_678"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4D4C8; \"> (Location 699)</span>",
+   "items": [
+    "gold_699"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4D8C8; \"> (Location 720)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4DCC8; \"> (Location 741)</span>",
+   "items": [
+    "shield_741"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4E0C8; \"> (Location 762)</span>",
+   "items": [
+    "shield_762"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4E4C8; \"> (Location 783)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4E8C8; \"> (Location 804)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4ECC8; \"> (Location 825)</span>",
+   "items": [
+    "scroll_825",
+    "shield_825"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B4F0C8; \"> (Location 846)</span>",
+   "items": [
+    "scroll_846",
+    "shield_846"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #B850C8; \"> (Location 7)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B854C8; \"> (Location 28)</span>",
+   "items": [
+    "scroll_28"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B858C8; \"> (Location 49)</span>",
+   "items": [
+    "dagger_49"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B85CC8; \"> (Location 70)</span>",
+   "items": [
+    "gold_70"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B860C8; \"> (Location 91)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B864C8; \"> (Location 112)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B868C8; \"> (Location 133)</span>",
+   "items": [
+    "gold_133",
+    "shield_133"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B86CC8; \"> (Location 154)</span>",
+   "items": [
+    "scroll_154"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B870C8; \"> (Location 175)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B874C8; \"> (Location 196)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B878C8; \">Northern Wilderness. (Location 217)</span>",
+   "items": [
+    "dagger_217"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B87CC8; \">Northern Wilderness. (Location 238)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B880C8; \">Northern Wilderness. (Location 259)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B884C8; \">Northern Wilderness. (Location 280)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B888C8; \">Northern Wilderness. (Location 301)</span>",
+   "items": [
+    "gold_301"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B88CC8; \">Northern Wilderness. (Location 322)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B890C8; \">Northern Wilderness. (Location 343)</span>",
+   "items": [
+    "gold_343"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B894C8; \">Northern Wilderness. (Location 364)</span>",
+   "items": [
+    "dagger_364"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B898C8; \">Northern Wilderness. (Location 385)</span>",
+   "items": [
+    "scroll_385"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B89CC8; \">Northern Wilderness. (Location 406)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8A0C8; \">Northern Wall. (Location 427)</span>",
+   "items": [
+    "shield_427"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8A4C8; \"> (Location 448)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8A8C8; \"> (Location 469)</span>",
+   "items": [
+    "gold_469"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8ACC8; \"> (Location 490)</span>",
+   "items": [
+    "dagger_490"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8B0C8; \"> (Location 511)</span>",
+   "items": [
+    "gold_511",
+    "scroll_511",
+    "shield_511"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8B4C8; \"> (Location 532)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8B8C8; \"> (Location 553)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8BCC8; \"> (Location 574)</span>",
+   "items": [
+    "gold_574"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8C0C8; \"> (Location 595)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8C4C8; \"> (Location 616)</span>",
+   "items": [
+    "gold_616"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8C8C8; \"> (Location 637)</span>",
+   "items": [
+    "scroll_637"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8CCC8; \"> (Location 658)</span>",
+   "items": [
+    "shield_658"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8D0C8; \"> (Location 679)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8D4C8; \"> (Location 700)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8D8C8; \"> (Location 721)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8DCC8; \"> (Location 742)</span>",
+   "items": [
+    "shield_742"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8E0C8; \"> (Location 763)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8E4C8; \"> (Location 784)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8E8C8; \"> (Location 805)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8ECC8; \"> (Location 826)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #B8F0C8; \"> (Location 847)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #BC50C8; \"> (Location 8)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC54C8; \"> (Location 29)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC58C8; \"> (Location 50)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC5CC8; \"> (Location 71)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC60C8; \"> (Location 92)</span>",
+   "items": [
+    "scroll_92"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC64C8; \"> (Location 113)</span>",
+   "items": [
+    "scroll_113",
+    "dagger_113"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC68C8; \"> (Location 134)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC6CC8; \"> (Location 155)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC70C8; \"> (Location 176)</span>",
+   "items": [
+    "shield_176",
+    "dagger_176"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC74C8; \"> (Location 197)</span>",
+   "items": [
+    "scroll_197"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC78C8; \">Northern Wilderness. (Location 218)</span>",
+   "items": [
+    "scroll_218"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC7CC8; \">Northern Wilderness. (Location 239)</span>",
+   "items": [
+    "dagger_239"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC80C8; \">Northern Wilderness. (Location 260)</span>",
+   "items": [
+    "gold_260"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC84C8; \">Northern Wilderness. (Location 281)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC88C8; \">Northern Wilderness. (Location 302)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC8CC8; \">Northern Wilderness. (Location 323)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC90C8; \">Northern Wilderness. (Location 344)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC94C8; \">Northern Wilderness. (Location 365)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC98C8; \">Northern Wilderness. (Location 386)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BC9CC8; \">Northern Wilderness. (Location 407)</span>",
+   "items": [
+    "dagger_407"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCA0C8; \">Northern Wall. (Location 428)</span>",
+   "items": [
+    "gold_428"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCA4C8; \"> (Location 449)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCA8C8; \"> (Location 470)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCACC8; \"> (Location 491)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCB0C8; \"> (Location 512)</span>",
+   "items": [
+    "scroll_512"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCB4C8; \"> (Location 533)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCB8C8; \"> (Location 554)</span>",
+   "items": [
+    "shield_554"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCBCC8; \"> (Location 575)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCC0C8; \"> (Location 596)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCC4C8; \"> (Location 617)</span>",
+   "items": [
+    "scroll_617"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCC8C8; \"> (Location 638)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCCCC8; \">Trading Post. (Location 659)</span>",
+   "items": [
+    "shield_659"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCD0C8; \">Trading Post Antechamber. (Location 680)</span>",
+   "items": [
+    "gold_680"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCD4C8; \"> (Location 701)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCD8C8; \"> (Location 722)</span>",
+   "items": [
+    "scroll_722"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCDCC8; \"> (Location 743)</span>",
+   "items": [
+    "gold_743"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCE0C8; \"> (Location 764)</span>",
+   "items": [
+    "shield_764"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCE4C8; \"> (Location 785)</span>",
+   "items": [
+    "dagger_785"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCE8C8; \"> (Location 806)</span>",
+   "items": [
+    "dagger_806"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCECC8; \"> (Location 827)</span>",
+   "items": [
+    "dagger_827"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #BCF0C8; \"> (Location 848)</span>",
+   "items": [
+    "dagger_848"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #C050C8; \"> (Location 9)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C054C8; \"> (Location 30)</span>",
+   "items": [
+    "dagger_30"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C058C8; \"> (Location 51)</span>",
+   "items": [
+    "gold_51"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C05CC8; \"> (Location 72)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C060C8; \"> (Location 93)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C064C8; \"> (Location 114)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C068C8; \"> (Location 135)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C06CC8; \"> (Location 156)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C070C8; \"> (Location 177)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C074C8; \"> (Location 198)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C078C8; \">Northern Wilderness. (Location 219)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C07CC8; \">Northern Wilderness. (Location 240)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C080C8; \">Northern Wilderness. (Location 261)</span>",
+   "items": [
+    "scroll_261"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C084C8; \">Northern Wilderness. (Location 282)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C088C8; \">Northern Wilderness. (Location 303)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C08CC8; \">Northern Wilderness. (Location 324)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C090C8; \">Northern Wilderness. (Location 345)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C094C8; \">Northern Wilderness. (Location 366)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C098C8; \">Northern Wilderness. (Location 387)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C09CC8; \">Northern Wilderness. (Location 408)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0A0C8; \">Northern Wall. (Location 429)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0A4C8; \"> (Location 450)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0A8C8; \"> (Location 471)</span>",
+   "items": [
+    "scroll_471"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0ACC8; \"> (Location 492)</span>",
+   "items": [
+    "shield_492"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0B0C8; \"> (Location 513)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0B4C8; \"> (Location 534)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0B8C8; \"> (Location 555)</span>",
+   "items": [
+    "dagger_555"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0BCC8; \"> (Location 576)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0C0C8; \">The northwest corner of a small brick plaza. (Location 597)</span>",
+   "items": [
+    "gold_597"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0C4C8; \">The west edge of a small brick plaza. (Location 618)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0C8C8; \">The west edge of a small brick plaza. (Location 639)</span>",
+   "items": [
+    "shield_639"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0CCC8; \">The west edge of a small brick plaza. (Location 660)</span>",
+   "items": [
+    "gold_660"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0D0C8; \">The southwest corner of a small brick plaza. (Location 681)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0D4C8; \"> (Location 702)</span>",
+   "items": [
+    "gold_702"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0D8C8; \"> (Location 723)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0DCC8; \"> (Location 744)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0E0C8; \"> (Location 765)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0E4C8; \"> (Location 786)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0E8C8; \"> (Location 807)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0ECC8; \"> (Location 828)</span>",
+   "items": [
+    "scroll_828"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C0F0C8; \"> (Location 849)</span>",
+   "items": [
+    "scroll_849"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #C450C8; \"> (Location 10)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C454C8; \"> (Location 31)</span>",
+   "items": [
+    "shield_31",
+    "dagger_31"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C458C8; \"> (Location 52)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C45CC8; \"> (Location 73)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C460C8; \"> (Location 94)</span>",
+   "items": [
+    "gold_94"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C464C8; \"> (Location 115)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C468C8; \"> (Location 136)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C46CC8; \"> (Location 157)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C470C8; \"> (Location 178)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C474C8; \"> (Location 199)</span>",
+   "items": [
+    "shield_199"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C478C8; \">Northern Wilderness. (Location 220)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C47CC8; \">Northern Wilderness. (Location 241)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C480C8; \">Northern Wilderness. (Location 262)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C484C8; \">Northern Wilderness. (Location 283)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C488C8; \">Northern Wilderness. (Location 304)</span>",
+   "items": [
+    "gold_304"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C48CC8; \">Northern Wilderness. (Location 325)</span>",
+   "items": [
+    "gold_325"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C490C8; \">Northern Wilderness. (Location 346)</span>",
+   "items": [
+    "gold_346"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C494C8; \">Northern Wilderness. (Location 367)</span>",
+   "items": [
+    "gold_367"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C498C8; \">Northern Wilderness. (Location 388)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C49CC8; \">Northern Wilderness. (Location 409)</span>",
+   "items": [
+    "scroll_409"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4A0C8; \">Northern Wall. (Location 430)</span>",
+   "items": [
+    "scroll_430",
+    "dagger_430"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4A4C8; \"> (Location 451)</span>",
+   "items": [
+    "gold_451",
+    "shield_451"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4A8C8; \"> (Location 472)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4ACC8; \"> (Location 493)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4B0C8; \"> (Location 514)</span>",
+   "items": [
+    "dagger_514"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4B4C8; \"> (Location 535)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4B8C8; \"> (Location 556)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4BCC8; \"> (Location 577)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4C0C8; \">The north edge of a small brick plaza. (Location 598)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4C4C8; \">Northwest of the middle of a small brick plaza. (Location 619)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4C8C8; \">West of the middle of a small brick plaza. (Location 640)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4CCC8; \">Southwest of the middle of a small brick plaza. (Location 661)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4D0C8; \">The south edge of a small brick plaza. (Location 682)</span>",
+   "items": [
+    "gold_682"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4D4C8; \"> (Location 703)</span>",
+   "items": [
+    "shield_703"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4D8C8; \"> (Location 724)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4DCC8; \"> (Location 745)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4E0C8; \"> (Location 766)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4E4C8; \"> (Location 787)</span>",
+   "items": [
+    "gold_787"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4E8C8; \"> (Location 808)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4ECC8; \"> (Location 829)</span>",
+   "items": [
+    "dagger_829"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C4F0C8; \"> (Location 850)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #C850C8; \"> (Location 11)</span>",
+   "items": [
+    "scroll_11"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C854C8; \"> (Location 32)</span>",
+   "items": [
+    "dagger_32"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C858C8; \"> (Location 53)</span>",
+   "items": [
+    "scroll_53",
+    "dagger_53"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C85CC8; \"> (Location 74)</span>",
+   "items": [
+    "dagger_74"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C860C8; \"> (Location 95)</span>",
+   "items": [
+    "gold_95"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C864C8; \"> (Location 116)</span>",
+   "items": [
+    "shield_116"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C868C8; \"> (Location 137)</span>",
+   "items": [
+    "dagger_137"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C86CC8; \"> (Location 158)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C870C8; \"> (Location 179)</span>",
+   "items": [
+    "scroll_179"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C874C8; \"> (Location 200)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C878C8; \">Northern Road. Straying from the road is unsafe! (Location 221)</span>",
+   "items": [
+    "gold_221",
+    "dagger_221"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C87CC8; \">Northern Road. Straying from the road is unsafe! (Location 242)</span>",
+   "items": [
+    "gold_242"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C880C8; \">Northern Road. Straying from the road is unsafe! (Location 263)</span>",
+   "items": [
+    "dagger_263"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C884C8; \">Northern Road. Straying from the road is unsafe! (Location 284)</span>",
+   "items": [
+    "scroll_284"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C888C8; \">Northern Road. Straying from the road is unsafe! (Location 305)</span>",
+   "items": [
+    "shield_305",
+    "dagger_305"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C88CC8; \">Northern Road. Straying from the road is unsafe! (Location 326)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C890C8; \">Northern Road. Straying from the road is unsafe! (Location 347)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C894C8; \">Northern Road. Straying from the road is unsafe! (Location 368)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C898C8; \">Northern Road. Straying from the road is unsafe! (Location 389)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C89CC8; \">Northern Road. Straying from the road is unsafe! (Location 410)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8A0C8; \">Northern Road. Straying from the road is unsafe! (Location 431)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8A4C8; \">North Gate. The entrance to the town. To the north a road leads into the wilderness. To the south, a walkway leads into town. (Location 452)</span>",
+   "items": [
+    "dagger_452"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8A8C8; \">A narrow brick north-south walkway, lined by small brick buildings. (Location 473)</span>",
+   "items": [
+    "dagger_473"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8ACC8; \">A narrow brick north-south walkway, lined by small brick buildings. (Location 494)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8B0C8; \">A narrow brick north-south walkway, lined by small brick buildings. (Location 515)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8B4C8; \">A narrow brick north-south walkway, lined by small brick buildings. (Location 536)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8B8C8; \">A narrow brick north-south walkway, lined by small brick buildings. (Location 557)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8BCC8; \">A narrow brick north-south walkway, lined by small brick buildings. (Location 578)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8C0C8; \">The north edge of a small brick plaza. (Location 599)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8C4C8; \">North of the middle of a small brick plaza. (Location 620)</span>",
+   "items": [
+    "shield_620"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8C8C8; \">The middle of a small brick plaza, 50 feet square, surrounded by small brick buildings. (Location 641)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8CCC8; \">South of the middle of a small brick plaza. (Location 662)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8D0C8; \">The south edge of a small brick plaza. (Location 683)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8D4C8; \"> (Location 704)</span>",
+   "items": [
+    "dagger_704"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8D8C8; \"> (Location 725)</span>",
+   "items": [
+    "scroll_725"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8DCC8; \"> (Location 746)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8E0C8; \"> (Location 767)</span>",
+   "items": [
+    "scroll_767"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8E4C8; \"> (Location 788)</span>",
+   "items": [
+    "gold_788",
+    "shield_788"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8E8C8; \"> (Location 809)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8ECC8; \"> (Location 830)</span>",
+   "items": [
+    "dagger_830"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #C8F0C8; \"> (Location 851)</span>",
+   "items": [
+    "shield_851"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #CC50C8; \"> (Location 12)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC54C8; \"> (Location 33)</span>",
+   "items": [
+    "scroll_33"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC58C8; \"> (Location 54)</span>",
+   "items": [
+    "shield_54"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC5CC8; \"> (Location 75)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC60C8; \"> (Location 96)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC64C8; \"> (Location 117)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC68C8; \"> (Location 138)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC6CC8; \"> (Location 159)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC70C8; \"> (Location 180)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC74C8; \"> (Location 201)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC78C8; \">Northern Wilderness. (Location 222)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC7CC8; \">Northern Wilderness. (Location 243)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC80C8; \">Northern Wilderness. (Location 264)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC84C8; \">Northern Wilderness. (Location 285)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC88C8; \">Northern Wilderness. (Location 306)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC8CC8; \">Northern Wilderness. (Location 327)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC90C8; \">Northern Wilderness. (Location 348)</span>",
+   "items": [
+    "shield_348"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC94C8; \">Northern Wilderness. (Location 369)</span>",
+   "items": [
+    "shield_369"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC98C8; \">Northern Wilderness. (Location 390)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CC9CC8; \">Northern Wilderness. (Location 411)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCA0C8; \">Northern Wall. (Location 432)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCA4C8; \">North Gatehouse. (Location 453)</span>",
+   "items": [
+    "dagger_453"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCA8C8; \"> (Location 474)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCACC8; \"> (Location 495)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCB0C8; \"> (Location 516)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCB4C8; \"> (Location 537)</span>",
+   "items": [
+    "gold_537"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCB8C8; \"> (Location 558)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCBCC8; \"> (Location 579)</span>",
+   "items": [
+    "shield_579"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCC0C8; \">The north edge of a small brick plaza. (Location 600)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCC4C8; \">Northeast of the middle of a small brick plaza. (Location 621)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCC8C8; \">East of the middle of a small brick plaza. (Location 642)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCCCC8; \">Southeast of the middle of a small brick plaza. (Location 663)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCD0C8; \">The south edge of a small brick plaza. (Location 684)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCD4C8; \"> (Location 705)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCD8C8; \"> (Location 726)</span>",
+   "items": [
+    "gold_726"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCDCC8; \"> (Location 747)</span>",
+   "items": [
+    "scroll_747"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCE0C8; \"> (Location 768)</span>",
+   "items": [
+    "gold_768"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCE4C8; \"> (Location 789)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCE8C8; \"> (Location 810)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCECC8; \"> (Location 831)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #CCF0C8; \"> (Location 852)</span>",
+   "items": [
+    "shield_852"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #D050C8; \"> (Location 13)</span>",
+   "items": [
+    "scroll_13"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D054C8; \"> (Location 34)</span>",
+   "items": [
+    "dagger_34"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D058C8; \"> (Location 55)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D05CC8; \"> (Location 76)</span>",
+   "items": [
+    "gold_76",
+    "shield_76"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D060C8; \"> (Location 97)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D064C8; \"> (Location 118)</span>",
+   "items": [
+    "gold_118"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D068C8; \"> (Location 139)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D06CC8; \"> (Location 160)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D070C8; \"> (Location 181)</span>",
+   "items": [
+    "dagger_181"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D074C8; \"> (Location 202)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D078C8; \">Northern Wilderness. (Location 223)</span>",
+   "items": [
+    "dagger_223"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D07CC8; \">Northern Wilderness. (Location 244)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D080C8; \">Northern Wilderness. (Location 265)</span>",
+   "items": [
+    "dagger_265"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D084C8; \">Northern Wilderness. (Location 286)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D088C8; \">Northern Wilderness. (Location 307)</span>",
+   "items": [
+    "shield_307"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D08CC8; \">Northern Wilderness. (Location 328)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D090C8; \">Northern Wilderness. (Location 349)</span>",
+   "items": [
+    "dagger_349"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D094C8; \">Northern Wilderness. (Location 370)</span>",
+   "items": [
+    "gold_370"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D098C8; \">Northern Wilderness. (Location 391)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D09CC8; \">Northern Wilderness. (Location 412)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0A0C8; \">Northern Wall. (Location 433)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0A4C8; \"> (Location 454)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0A8C8; \"> (Location 475)</span>",
+   "items": [
+    "scroll_475"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0ACC8; \"> (Location 496)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0B0C8; \"> (Location 517)</span>",
+   "items": [
+    "shield_517"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0B4C8; \"> (Location 538)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0B8C8; \"> (Location 559)</span>",
+   "items": [
+    "gold_559",
+    "scroll_559"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0BCC8; \"> (Location 580)</span>",
+   "items": [
+    "shield_580"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0C0C8; \">The northeast corner of a small brick plaza. (Location 601)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0C4C8; \">The east edge of a small brick plaza. (Location 622)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0C8C8; \">The east edge of a small brick plaza. (Location 643)</span>",
+   "items": [
+    "dagger_643"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0CCC8; \">The east edge of a small brick plaza. (Location 664)</span>",
+   "items": [
+    "gold_664",
+    "dagger_664"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0D0C8; \">The southeast corner of a small brick plaza. (Location 685)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0D4C8; \"> (Location 706)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0D8C8; \"> (Location 727)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0DCC8; \"> (Location 748)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0E0C8; \"> (Location 769)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0E4C8; \"> (Location 790)</span>",
+   "items": [
+    "scroll_790"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0E8C8; \"> (Location 811)</span>",
+   "items": [
+    "dagger_811"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0ECC8; \"> (Location 832)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D0F0C8; \"> (Location 853)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #D450C8; \"> (Location 14)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D454C8; \"> (Location 35)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D458C8; \"> (Location 56)</span>",
+   "items": [
+    "dagger_56"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D45CC8; \"> (Location 77)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D460C8; \"> (Location 98)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D464C8; \"> (Location 119)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D468C8; \"> (Location 140)</span>",
+   "items": [
+    "shield_140"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D46CC8; \"> (Location 161)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D470C8; \"> (Location 182)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D474C8; \"> (Location 203)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D478C8; \">Northern Wilderness. (Location 224)</span>",
+   "items": [
+    "shield_224"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D47CC8; \">Northern Wilderness. (Location 245)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D480C8; \">Northern Wilderness. (Location 266)</span>",
+   "items": [
+    "shield_266",
+    "dagger_266"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D484C8; \">Northern Wilderness. (Location 287)</span>",
+   "items": [
+    "gold_287",
+    "shield_287",
+    "dagger_287"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D488C8; \">Northern Wilderness. (Location 308)</span>",
+   "items": [
+    "gold_308",
+    "dagger_308"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D48CC8; \">Northern Wilderness. (Location 329)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D490C8; \">Northern Wilderness. (Location 350)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D494C8; \">Northern Wilderness. (Location 371)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D498C8; \">Northern Wilderness. (Location 392)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D49CC8; \">Northern Wilderness. (Location 413)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4A0C8; \">Northern Wall. (Location 434)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4A4C8; \"> (Location 455)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4A8C8; \"> (Location 476)</span>",
+   "items": [
+    "shield_476"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4ACC8; \"> (Location 497)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4B0C8; \"> (Location 518)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4B4C8; \"> (Location 539)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4B8C8; \"> (Location 560)</span>",
+   "items": [
+    "scroll_560"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4BCC8; \"> (Location 581)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4C0C8; \"> (Location 602)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4C4C8; \"> (Location 623)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4C8C8; \"> (Location 644)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4CCC8; \"> (Location 665)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4D0C8; \"> (Location 686)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4D4C8; \"> (Location 707)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4D8C8; \"> (Location 728)</span>",
+   "items": [
+    "scroll_728",
+    "shield_728",
+    "dagger_728"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4DCC8; \"> (Location 749)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4E0C8; \"> (Location 770)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4E4C8; \"> (Location 791)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4E8C8; \"> (Location 812)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4ECC8; \"> (Location 833)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D4F0C8; \"> (Location 854)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #D850C8; \"> (Location 15)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D854C8; \"> (Location 36)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D858C8; \"> (Location 57)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D85CC8; \"> (Location 78)</span>",
+   "items": [
+    "dagger_78"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D860C8; \"> (Location 99)</span>",
+   "items": [
+    "scroll_99"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D864C8; \"> (Location 120)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D868C8; \"> (Location 141)</span>",
+   "items": [
+    "scroll_141",
+    "dagger_141"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D86CC8; \"> (Location 162)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D870C8; \"> (Location 183)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D874C8; \"> (Location 204)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D878C8; \">Northern Wilderness. (Location 225)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D87CC8; \">Northern Wilderness. (Location 246)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D880C8; \">Northern Wilderness. (Location 267)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D884C8; \">Northern Wilderness. (Location 288)</span>",
+   "items": [
+    "gold_288"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D888C8; \">Northern Wilderness. (Location 309)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D88CC8; \">Northern Wilderness. (Location 330)</span>",
+   "items": [
+    "shield_330",
+    "dagger_330"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D890C8; \">Northern Wilderness. (Location 351)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D894C8; \">Northern Wilderness. (Location 372)</span>",
+   "items": [
+    "gold_372"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D898C8; \">Northern Wilderness. (Location 393)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D89CC8; \">Northern Wilderness. (Location 414)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8A0C8; \">Northern Wall. (Location 435)</span>",
+   "items": [
+    "dagger_435"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8A4C8; \"> (Location 456)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8A8C8; \"> (Location 477)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8ACC8; \"> (Location 498)</span>",
+   "items": [
+    "scroll_498"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8B0C8; \"> (Location 519)</span>",
+   "items": [
+    "scroll_519"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8B4C8; \"> (Location 540)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8B8C8; \"> (Location 561)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8BCC8; \"> (Location 582)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8C0C8; \"> (Location 603)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8C4C8; \"> (Location 624)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8C8C8; \"> (Location 645)</span>",
+   "items": [
+    "scroll_645"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8CCC8; \"> (Location 666)</span>",
+   "items": [
+    "shield_666"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8D0C8; \"> (Location 687)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8D4C8; \"> (Location 708)</span>",
+   "items": [
+    "dagger_708"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8D8C8; \"> (Location 729)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8DCC8; \"> (Location 750)</span>",
+   "items": [
+    "dagger_750"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8E0C8; \"> (Location 771)</span>",
+   "items": [
+    "scroll_771",
+    "shield_771",
+    "dagger_771"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8E4C8; \"> (Location 792)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8E8C8; \"> (Location 813)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8ECC8; \"> (Location 834)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #D8F0C8; \"> (Location 855)</span>",
+   "items": [
+    "dagger_855"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #DC50C8; \"> (Location 16)</span>",
+   "items": [
+    "shield_16"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC54C8; \"> (Location 37)</span>",
+   "items": [
+    "scroll_37"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC58C8; \"> (Location 58)</span>",
+   "items": [
+    "dagger_58"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC5CC8; \"> (Location 79)</span>",
+   "items": [
+    "shield_79"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC60C8; \"> (Location 100)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC64C8; \"> (Location 121)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC68C8; \"> (Location 142)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC6CC8; \"> (Location 163)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC70C8; \"> (Location 184)</span>",
+   "items": [
+    "gold_184"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC74C8; \"> (Location 205)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC78C8; \">Northern Wilderness. (Location 226)</span>",
+   "items": [
+    "shield_226"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC7CC8; \">Northern Wilderness. (Location 247)</span>",
+   "items": [
+    "gold_247"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC80C8; \">Northern Wilderness. (Location 268)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC84C8; \">Northern Wilderness. (Location 289)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC88C8; \">Northern Wilderness. (Location 310)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC8CC8; \">Northern Wilderness. (Location 331)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC90C8; \">Northern Wilderness. (Location 352)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC94C8; \">Northern Wilderness. (Location 373)</span>",
+   "items": [
+    "scroll_373"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC98C8; \">Northern Wilderness. (Location 394)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DC9CC8; \">Northern Wilderness. (Location 415)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCA0C8; \">Northern Wall. (Location 436)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCA4C8; \"> (Location 457)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCA8C8; \"> (Location 478)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCACC8; \"> (Location 499)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCB0C8; \"> (Location 520)</span>",
+   "items": [
+    "gold_520",
+    "scroll_520"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCB4C8; \"> (Location 541)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCB8C8; \"> (Location 562)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCBCC8; \"> (Location 583)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCC0C8; \"> (Location 604)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCC4C8; \"> (Location 625)</span>",
+   "items": [
+    "scroll_625"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCC8C8; \"> (Location 646)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCCCC8; \"> (Location 667)</span>",
+   "items": [
+    "scroll_667"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCD0C8; \"> (Location 688)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCD4C8; \"> (Location 709)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCD8C8; \"> (Location 730)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCDCC8; \"> (Location 751)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCE0C8; \"> (Location 772)</span>",
+   "items": [
+    "scroll_772"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCE4C8; \"> (Location 793)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCE8C8; \"> (Location 814)</span>",
+   "items": [
+    "scroll_814"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCECC8; \"> (Location 835)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #DCF0C8; \"> (Location 856)</span>",
+   "items": [
+    "shield_856"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #E050C8; \"> (Location 17)</span>",
+   "items": [
+    "gold_17"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E054C8; \"> (Location 38)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E058C8; \"> (Location 59)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E05CC8; \"> (Location 80)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E060C8; \"> (Location 101)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E064C8; \"> (Location 122)</span>",
+   "items": [
+    "dagger_122"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E068C8; \"> (Location 143)</span>",
+   "items": [
+    "shield_143"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E06CC8; \"> (Location 164)</span>",
+   "items": [
+    "shield_164"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E070C8; \"> (Location 185)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E074C8; \"> (Location 206)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E078C8; \">Northern Wilderness. (Location 227)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E07CC8; \">Northern Wilderness. (Location 248)</span>",
+   "items": [
+    "scroll_248"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E080C8; \">Northern Wilderness. (Location 269)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E084C8; \">Northern Wilderness. (Location 290)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E088C8; \">Northern Wilderness. (Location 311)</span>",
+   "items": [
+    "dagger_311"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E08CC8; \">Northern Wilderness. (Location 332)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E090C8; \">Northern Wilderness. (Location 353)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E094C8; \">Northern Wilderness. (Location 374)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E098C8; \">Northern Wilderness. (Location 395)</span>",
+   "items": [
+    "scroll_395"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E09CC8; \">Northern Wilderness. (Location 416)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0A0C8; \">Northern Wall. (Location 437)</span>",
+   "items": [
+    "scroll_437"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0A4C8; \"> (Location 458)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0A8C8; \"> (Location 479)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0ACC8; \"> (Location 500)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0B0C8; \"> (Location 521)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0B4C8; \"> (Location 542)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0B8C8; \"> (Location 563)</span>",
+   "items": [
+    "gold_563",
+    "dagger_563"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0BCC8; \"> (Location 584)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0C0C8; \"> (Location 605)</span>",
+   "items": [
+    "shield_605"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0C4C8; \"> (Location 626)</span>",
+   "items": [
+    "shield_626"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0C8C8; \"> (Location 647)</span>",
+   "items": [
+    "gold_647"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0CCC8; \"> (Location 668)</span>",
+   "items": [
+    "dagger_668"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0D0C8; \"> (Location 689)</span>",
+   "items": [
+    "dagger_689"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0D4C8; \"> (Location 710)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0D8C8; \"> (Location 731)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0DCC8; \"> (Location 752)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0E0C8; \"> (Location 773)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0E4C8; \"> (Location 794)</span>",
+   "items": [
+    "scroll_794"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0E8C8; \"> (Location 815)</span>",
+   "items": [
+    "scroll_815"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0ECC8; \"> (Location 836)</span>",
+   "items": [
+    "dagger_836"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E0F0C8; \"> (Location 857)</span>",
+   "items": [
+    "shield_857"
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #E450C8; \"> (Location 18)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E454C8; \"> (Location 39)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E458C8; \"> (Location 60)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E45CC8; \"> (Location 81)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E460C8; \"> (Location 102)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E464C8; \"> (Location 123)</span>",
+   "items": [
+    "gold_123"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E468C8; \"> (Location 144)</span>",
+   "items": [
+    "gold_144"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E46CC8; \"> (Location 165)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E470C8; \"> (Location 186)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E474C8; \"> (Location 207)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E478C8; \">Northern Wilderness. (Location 228)</span>",
+   "items": [
+    "shield_228"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E47CC8; \">Northern Wilderness. (Location 249)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E480C8; \">Northern Wilderness. (Location 270)</span>",
+   "items": [
+    "dagger_270"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E484C8; \">Northern Wilderness. (Location 291)</span>",
+   "items": [
+    "scroll_291"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E488C8; \">Northern Wilderness. (Location 312)</span>",
+   "items": [
+    "gold_312"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E48CC8; \">Northern Wilderness. (Location 333)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E490C8; \">Northern Wilderness. (Location 354)</span>",
+   "items": [
+    "dagger_354"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E494C8; \">Northern Wilderness. (Location 375)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E498C8; \">Northern Wilderness. (Location 396)</span>",
+   "items": [
+    "shield_396"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E49CC8; \">Northern Wilderness. (Location 417)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4A0C8; \">Northern Wall. (Location 438)</span>",
+   "items": [
+    "gold_438"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4A4C8; \"> (Location 459)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4A8C8; \"> (Location 480)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4ACC8; \"> (Location 501)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4B0C8; \"> (Location 522)</span>",
+   "items": [
+    "gold_522"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4B4C8; \"> (Location 543)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4B8C8; \"> (Location 564)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4BCC8; \"> (Location 585)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4C0C8; \"> (Location 606)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4C4C8; \"> (Location 627)</span>",
+   "items": [
+    "dagger_627"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4C8C8; \"> (Location 648)</span>",
+   "items": [
+    "shield_648"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4CCC8; \"> (Location 669)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4D0C8; \"> (Location 690)</span>",
+   "items": [
+    "shield_690"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4D4C8; \"> (Location 711)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4D8C8; \"> (Location 732)</span>",
+   "items": [
+    "gold_732"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4DCC8; \"> (Location 753)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4E0C8; \"> (Location 774)</span>",
+   "items": [
+    "shield_774",
+    "dagger_774"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4E4C8; \"> (Location 795)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4E8C8; \"> (Location 816)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4ECC8; \"> (Location 837)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E4F0C8; \"> (Location 858)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #E850C8; \"> (Location 19)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E854C8; \"> (Location 40)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E858C8; \"> (Location 61)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E85CC8; \"> (Location 82)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E860C8; \"> (Location 103)</span>",
+   "items": [
+    "scroll_103"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E864C8; \"> (Location 124)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E868C8; \"> (Location 145)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E86CC8; \"> (Location 166)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E870C8; \"> (Location 187)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E874C8; \"> (Location 208)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E878C8; \">Northern Wilderness. (Location 229)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E87CC8; \">Northern Wilderness. (Location 250)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E880C8; \">Northern Wilderness. (Location 271)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E884C8; \">Northern Wilderness. (Location 292)</span>",
+   "items": [
+    "gold_292"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E888C8; \">Northern Wilderness. (Location 313)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E88CC8; \">Northern Wilderness. (Location 334)</span>",
+   "items": [
+    "gold_334"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E890C8; \">Northern Wilderness. (Location 355)</span>",
+   "items": [
+    "dagger_355"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E894C8; \">Northern Wilderness. (Location 376)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E898C8; \">Northern Wilderness. (Location 397)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E89CC8; \">Northern Wilderness. (Location 418)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8A0C8; \">Northern Wall. (Location 439)</span>",
+   "items": [
+    "dagger_439"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8A4C8; \"> (Location 460)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8A8C8; \"> (Location 481)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8ACC8; \"> (Location 502)</span>",
+   "items": [
+    "scroll_502",
+    "shield_502"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8B0C8; \"> (Location 523)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8B4C8; \"> (Location 544)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8B8C8; \"> (Location 565)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8BCC8; \"> (Location 586)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8C0C8; \"> (Location 607)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8C4C8; \"> (Location 628)</span>",
+   "items": [
+    "gold_628"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8C8C8; \"> (Location 649)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8CCC8; \"> (Location 670)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8D0C8; \"> (Location 691)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8D4C8; \"> (Location 712)</span>",
+   "items": [
+    "gold_712"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8D8C8; \"> (Location 733)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8DCC8; \"> (Location 754)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8E0C8; \"> (Location 775)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8E4C8; \"> (Location 796)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8E8C8; \"> (Location 817)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8ECC8; \"> (Location 838)</span>",
+   "items": [
+    "dagger_838"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #E8F0C8; \"> (Location 859)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #EC50C8; \"> (Location 20)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC54C8; \"> (Location 41)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC58C8; \"> (Location 62)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC5CC8; \"> (Location 83)</span>",
+   "items": [
+    "gold_83",
+    "scroll_83",
+    "dagger_83"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC60C8; \"> (Location 104)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC64C8; \"> (Location 125)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC68C8; \"> (Location 146)</span>",
+   "items": [
+    "dagger_146"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC6CC8; \"> (Location 167)</span>",
+   "items": [
+    "gold_167"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC70C8; \"> (Location 188)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC74C8; \"> (Location 209)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC78C8; \">Northern Wilderness. (Location 230)</span>",
+   "items": [
+    "scroll_230"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC7CC8; \">Northern Wilderness. (Location 251)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC80C8; \">Northern Wilderness. (Location 272)</span>",
+   "items": [
+    "scroll_272"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC84C8; \">Northern Wilderness. (Location 293)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC88C8; \">Northern Wilderness. (Location 314)</span>",
+   "items": [
+    "scroll_314"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC8CC8; \">Northern Wilderness. (Location 335)</span>",
+   "items": [
+    "scroll_335",
+    "shield_335"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC90C8; \">Northern Wilderness. (Location 356)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC94C8; \">Northern Wilderness. (Location 377)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC98C8; \">Northern Wilderness. (Location 398)</span>",
+   "items": [
+    "shield_398",
+    "dagger_398"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #EC9CC8; \">Northern Wilderness. (Location 419)</span>",
+   "items": [
+    "dagger_419"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECA0C8; \">Northern Wall. (Location 440)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECA4C8; \"> (Location 461)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECA8C8; \"> (Location 482)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECACC8; \"> (Location 503)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECB0C8; \"> (Location 524)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECB4C8; \"> (Location 545)</span>",
+   "items": [
+    "shield_545"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECB8C8; \"> (Location 566)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECBCC8; \"> (Location 587)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECC0C8; \"> (Location 608)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECC4C8; \"> (Location 629)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECC8C8; \"> (Location 650)</span>",
+   "items": [
+    "shield_650"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECCCC8; \"> (Location 671)</span>",
+   "items": [
+    "scroll_671"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECD0C8; \"> (Location 692)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECD4C8; \"> (Location 713)</span>",
+   "items": [
+    "scroll_713"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECD8C8; \"> (Location 734)</span>",
+   "items": [
+    "gold_734"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECDCC8; \"> (Location 755)</span>",
+   "items": [
+    "gold_755"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECE0C8; \"> (Location 776)</span>",
+   "items": [
+    "gold_776"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECE4C8; \"> (Location 797)</span>",
+   "items": [
+    "shield_797"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECE8C8; \"> (Location 818)</span>",
+   "items": [
+    "shield_818"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECECC8; \"> (Location 839)</span>",
+   "items": [
+    "scroll_839"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #ECF0C8; \"> (Location 860)</span>",
+   "items": [
+    ""
+   ]
+  }
+ ],
+ [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+   "description": "<span style=\"background-color: #F050C8; \"> (Location 21)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F054C8; \"> (Location 42)</span>",
+   "items": [
+    "gold_42"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F058C8; \"> (Location 63)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F05CC8; \"> (Location 84)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F060C8; \"> (Location 105)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F064C8; \"> (Location 126)</span>",
+   "items": [
+    "dagger_126"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F068C8; \"> (Location 147)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F06CC8; \"> (Location 168)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F070C8; \"> (Location 189)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F074C8; \"> (Location 210)</span>",
+   "items": [
+    "scroll_210"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F078C8; \">Northern Wilderness. (Location 231)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F07CC8; \">Northern Wilderness. (Location 252)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F080C8; \">Northern Wilderness. (Location 273)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F084C8; \">Northern Wilderness. (Location 294)</span>",
+   "items": [
+    "gold_294",
+    "shield_294"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F088C8; \">Northern Wilderness. (Location 315)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F08CC8; \">Northern Wilderness. (Location 336)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F090C8; \">Northern Wilderness. (Location 357)</span>",
+   "items": [
+    "dagger_357"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F094C8; \">Northern Wilderness. (Location 378)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F098C8; \">Northern Wilderness. (Location 399)</span>",
+   "items": [
+    "scroll_399"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F09CC8; \">Northern Wilderness. (Location 420)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0A0C8; \">Northern Wall. (Location 441)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0A4C8; \"> (Location 462)</span>",
+   "items": [
+    "shield_462"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0A8C8; \"> (Location 483)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0ACC8; \"> (Location 504)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0B0C8; \"> (Location 525)</span>",
+   "items": [
+    "gold_525"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0B4C8; \"> (Location 546)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0B8C8; \"> (Location 567)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0BCC8; \"> (Location 588)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0C0C8; \"> (Location 609)</span>",
+   "items": [
+    "dagger_609"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0C4C8; \"> (Location 630)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0C8C8; \"> (Location 651)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0CCC8; \"> (Location 672)</span>",
+   "items": [
+    "dagger_672"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0D0C8; \"> (Location 693)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0D4C8; \"> (Location 714)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0D8C8; \"> (Location 735)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0DCC8; \"> (Location 756)</span>",
+   "items": [
+    "shield_756"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0E0C8; \"> (Location 777)</span>",
+   "items": [
+    "scroll_777"
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0E4C8; \"> (Location 798)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0E8C8; \"> (Location 819)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0ECC8; \"> (Location 840)</span>",
+   "items": [
+    ""
+   ]
+  },
+  {
+   "description": "<span style=\"background-color: #F0F0C8; \"> (Location 861)</span>",
+   "items": [
+    "shield_861"
+   ]
+  }
+ ]
+]

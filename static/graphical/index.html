@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Socket.IO chat</title>
+		<style>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		body { font-family: Serif; }
+		form {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+		form input { width: 100%; }
+
+    #roomDescription { background-color: #fff; }
+    #items { background-color: #eae; }
+		#messages {
+      background-color: #eee;
+      width: 100%;
+      height: 20%;
+      position: fixed;
+      bottom: 1.5rem;
+    }
+
+		</style>
+	</head>
+
+	<body>
+    <h1>Your location:</h1>
+    <div id=roomDescription></div>
+
+    <h2>Items here:</h2>
+    <div id=items></div>
+
+    <h3>Messages:</h3>
+		<textarea id="messages" rows=10></textarea>
+
+		<form action="">
+			<input id="m" autocomplete="off" />
+		</form>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="messages.js"></script>
+		<script src="client.js"></script>
+	</body>
+</html>
+

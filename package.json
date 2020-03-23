@@ -1,0 +1,17 @@
+{
+  "name": "webDungeon2",
+  "version": "0.0.1",
+  "description": "MUD using socket.io",
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.5.0",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1"
+  }
+}
