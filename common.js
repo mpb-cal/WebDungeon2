@@ -1,4 +1,3 @@
-'use strict';
 
 module.exports = {
   RESP_OK: 'ok',

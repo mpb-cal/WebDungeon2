@@ -1,4 +1,5 @@
 const _ = require('underscore');
+const sprintf = require('sprintf-js').sprintf
 
 //_.range(0, 200).forEach((e,i) => { d[i] = {}; });
 
@@ -68,63 +69,65 @@ _.range(80, 91).forEach((e) => {
 });
 
 
-$roomId = 1;
-$rooms = array();
+let roomId = 1;
+let rooms = [];
 
-for ($y=70; $y<=110; $y++)
-{
-	for ($x=90; $x<=110; $x++)
-	{
-		makeRoom( $x, $y );
+for (let y=70; y<=110; y++) {
+	for (let x=90; x<=110; x++) {
+		makeRoom(x, y);
 	}
 }
 
 //makeRoom( 100, 100 );
 
-foreach (array_keys( $rooms ) as $x)
-{
-	foreach (array_keys( $rooms[$x] ) as $y)
-	{
-		print 
-			"[$x][$y]" .
-			"[" . $rooms[$x][$y]['id'] . "]" .
-			"[" . $rooms[$x][$y]['desc'] . "]" .
-			"[" . $rooms[$x][$y]['items'] . "]" .
-			"\n";
-	}
-}
+[...rooms.keys()].forEach((x) => {
+	if (typeof rooms[x] !== 'undefined') {
+    [...rooms[x].keys()].forEach((y) => {
+  /*
+      print 
+        "[" . x "][" . y . "]" .
+        "[" . rooms[x][y]['id'] . "]" .
+        "[" . rooms[x][y]['desc'] . "]" .
+        "[" . rooms[x][y]['items'] . "]" .
+        "\n";
+  */
+    })
+  }
+});
 
-exit;
-
-function makeRoom( $x, $y )
-{
-	global $roomId, $rooms, d;
-
-	if ($x < 1 or $x > 200 or $y < 1 or $y > 200)
+function makeRoom(x, y) {
+	if (x < 1 || x > 200 || y < 1 || y > 200)
 		return;
 
-	$items = '';
-	if (rand( 1, 10 ) == 1) $items .= "gold_$roomId,";
-	if (rand( 1, 10 ) == 1) $items .= "scroll_$roomId,";
-	if (rand( 1, 10 ) == 1) $items .= "shield_$roomId,";
-	if (rand( 1, 10 ) == 1) $items .= "dagger_$roomId,";
-	$items = preg_replace( "/,$/", '', $items );
+	let items = '';
+	if (Math.random() * 10 == 0) items += `gold_${roomId},`;
+	if (Math.random() * 10 == 0) items += `scroll_${roomId},`;
+	if (Math.random() * 10 == 0) items += `shield_${roomId},`;
+	if (Math.random() * 10 == 0) items += `dagger_${roomId},`;
+	items.replace(/,$/, '');
 
-	$color = sprintf( "#%02X%02X%02X", ($x-50) * 4, ($y-50) * 4, 200 );
+	let color = sprintf( "#%02X%02X%02X", (x-50) * 4, (y-50) * 4, 200 );
 
-	$desc = "<span style=\"background-color: $color; \">";
-	if (isset( d[$x][$y] )) $desc .= d[$x][$y];
-	$desc .= " (Location $roomId)";
-	$desc .= "</span>";
+	let desc = `<span style="background-color: ${color}; ">`;
+	desc += d[x][y];
+	desc += ` (Location ${roomId})`;
+	desc += "</span>";
 
-	$rooms[$x][$y]['id'] = $roomId;
-	$rooms[$x][$y]['desc'] = $desc;
-	$rooms[$x][$y]['items'] = $items;
+	if (typeof rooms[x] === 'undefined') {
+    rooms[x] = [];
+  }
 
-	$roomId++;
+	rooms[x][y] = {
+    id: roomId,
+    desc: desc,
+    items: items,
+  };
+
+	roomId++;
 }
 
 
+module.exports = {
+  rooms,
+};
 
-
-*/

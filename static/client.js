@@ -1,4 +1,3 @@
-'use strict';
 
 $(function() {
   document.getElementById('m').focus();

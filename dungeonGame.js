@@ -1,4 +1,3 @@
-'use strict';
 
 /* eslint-disable no-console */
 
@@ -125,7 +124,9 @@ function getPlayersView(username) {
 /**
  */
 function getRoom(x, y) {
-  return worldMap[x][y];
+  if (typeof worldMap[x] !== 'undefined') {
+    return worldMap[x][y];
+  }
 }
 
 
@@ -136,8 +137,8 @@ function getRoomState(x, y) {
 
   return {
     coords: {x: x, y: y},
-    description: room.description,
-    items: room.items,
+    description: (typeof room === 'undefined' ? '' : room.description),
+    items: (typeof room === 'undefined' ? '' : room.items),
     occupants: getOccupants(x, y),
     npcs: getNPCs(x, y),
   };
