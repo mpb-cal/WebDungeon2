@@ -1,11 +1,8 @@
+const socket = io();
+const e = React.createElement;
 
 $(function() {
   document.getElementById('m').focus();
-
-  const socket = io();
-
-  // send our 1st command
-  socket.emit(messages.COMMAND_MESSAGE, 'look');
 
   // send message from chat control
   $('form').submit( function() {
@@ -14,28 +11,72 @@ $(function() {
     $('#m').val('');
     return false;
   });
-
-  // receive message and display it
-  socket.on(messages.RESPONSE_MESSAGE, function(msg) {
-    console.log("socket message: ", msg);
-    msg.error && alert(msg.error);
-    msg.text && appendMessage(msg.text);
-    msg.chat && appendMessage('<span class="chat">' + msg.chat + '</span>');
-  });
-
-  function appendMessage(msg) {
-    let d = $('<div>');
-    d.append(msg);
-    $('#messages').append(d);
-    $('html, body').scrollTop( $(document).height() );
-  }
-
-  function appendChatMessage(msg) {
-    let d = $('<div>');
-    d.append(msg);
-    $('#chat-messages').append(d);
-    $('html, body').scrollTop( $(document).height() );
-  }
 });
 
+class GamePanel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSocket = this.handleSocket.bind(this);
+    this.state = {
+      messageList: [1, 2, 3],
+    };
+  }
+
+  appendMessage(msg) {
+    this.setState((state, props) => {
+      let messageList = state.messageList;
+      messageList.push(msg);
+      
+      return {
+        ...state,
+        messageList,
+      };
+    });
+    //$('html, body').scrollTop( $(document).height() );
+  }
+
+  handleSocket(msg) {
+    console.log("server message: ", msg);
+    msg.error && alert(msg.error);
+    msg.text && this.appendMessage(msg.text);
+    //msg.chat && this.appendMessage('<span class="chat">' + msg.chat + '</span>');
+  }
+
+  componentDidMount() {
+    socket.on(messages.RESPONSE_MESSAGE, this.handleSocket);
+  }
+
+  render() {
+    return (
+      <MessagePanel messageList={this.state.messageList}>
+      </MessagePanel>
+    );
+  }
+}
+
+const MessagePanel = ({messageList}) => (
+  <div id="messages">
+    {messageList.map((e,i) => (<Message key={i}>{e}</Message>))}
+  </div>
+);
+
+const Message = (props) => (
+  <div className="message">
+    {props.children}
+  </div>
+);
+
+function App() {
+  // send our 1st command
+  //socket.emit(messages.COMMAND_MESSAGE, 'look');
+
+  return (
+    <GamePanel />
+  );
+}
+
+ReactDOM.render(
+  <App />,
+  document.querySelector('#root')
+);
 
