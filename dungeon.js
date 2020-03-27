@@ -13,8 +13,9 @@ function log(msg) {
 
 
 class Dungeon extends EventEmitter {
-  static SEND_TO_ALL_USERS = 'sendToAllUsers';
-  static SEND_TO_USER = 'sendToUser';
+  // event types emitted by this class:
+  static SEND_TO_ALL_USERS = '_sendToAllUsers';
+  static SEND_TO_USER = '_sendToUser';
 
   adminCommand(command = '', ...params) {
     log(`adminCommand: ${command} ${params}`);
@@ -441,12 +442,12 @@ class Dungeon extends EventEmitter {
   }
 
   sendUpdateToAll(update) {
-    this.emit(this.SEND_TO_ALL_USERS, update);
+    this.emit(Dungeon.SEND_TO_ALL_USERS, update);
   }
 
   sendUpdateToRoom(x, y, update, except = []) {
     _.difference(dungeonGame.getOccupantNames(x, y), except)
-      .forEach((username) => this.emit(this.SEND_TO_USER, username, update));
+      .forEach((username) => this.emit(Dungeon.SEND_TO_USER, username, update));
   }
 
   isValidUsername(username) {

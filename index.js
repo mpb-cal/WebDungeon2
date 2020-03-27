@@ -15,8 +15,8 @@ app.use(express.static('static'));
 
 const dungeon = new Dungeon;
 dungeon.adminCommand(common.CMD_RESET_GAME); // mpb! misspelled not caught
-dungeon.on(dungeon.SEND_TO_ALL_USERS, sendToAllUsers);
-dungeon.on(dungeon.SEND_TO_USER, sendToUser);
+dungeon.on(Dungeon.SEND_TO_ALL_USERS, sendToAllUsers);
+dungeon.on(Dungeon.SEND_TO_USER, sendToUser);
 
 io.on('connection', function(socket) {
   // io.emit() for messages to all connections

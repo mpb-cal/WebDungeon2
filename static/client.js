@@ -20,7 +20,7 @@ $(function() {
     console.log("socket message: ", msg);
     msg.error && alert(msg.error);
     msg.text && appendMessage(msg.text);
-    msg.chat && appendChatMessage(msg.chat);
+    msg.chat && appendMessage('<span class="chat">' + msg.chat + '</span>');
   });
 
   function appendMessage(msg) {
