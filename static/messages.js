@@ -1,4 +1,11 @@
-'use strict';
+
+/*
+module.exports = {
+  COMMAND_MESSAGE: 'command_message',
+  RESPONSE_MESSAGE: 'response_message',
+  ALERT_MESSAGE: 'alert_message',
+};
+*/
 
 const MODULE_NAME = 'messages';
 

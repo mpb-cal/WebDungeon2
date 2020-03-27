@@ -4,11 +4,14 @@
 		<title>Web Dungeon 2</title>
     <link rel='stylesheet' href='normalize.min.css' type='text/css' media='all'>
 		<style>
-      body { font-family: sans-serif; }
+      body {
+        font-family: sans-serif;
+        background-color: #ccc;
+      }
       form {
         position: fixed;
-        bottom: 0;
         width: 100%;
+        top: 0;
       }
       form input { width: 100%; }
 
@@ -16,18 +19,28 @@
       #items { background-color: #eae; }
       #messages {
         background-color: #eee;
-        width: 100%;
+        width: 50%;
         height: 100%;
+        margin-top: 30px;
+        float: left;
+      }
+      #chat-messages {
+        background-color: #aaa;
+        width: 50%;
+        height: 100%;
+        margin-top: 30px;
+        float: right;
       }
 		</style>
 	</head>
 
 	<body>
-		<div id="messages"></div>
-
 		<form action="">
 			<input id="m" autocomplete="off" />
 		</form>
+
+		<div id="messages"></div>
+		<div id="chat-messages"></div>
 
 		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 		<script src="/socket.io/socket.io.js"></script>

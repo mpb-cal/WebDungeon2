@@ -4,6 +4,10 @@ $(function() {
 
   const socket = io();
 
+  // send our 1st command
+  socket.emit(messages.COMMAND_MESSAGE, 'look');
+
+  // send message from chat control
   $('form').submit( function() {
     const msg = $('#m').val();
     socket.emit(messages.COMMAND_MESSAGE, msg);
@@ -11,16 +15,12 @@ $(function() {
     return false;
   });
 
-  socket.on(messages.RESPONSE_MESSAGE, function(response) {
-    const error = response.error;
-    if (error) {
-      alert(error);
-    }
-
-    const text = response.text;
-    if (text) {
-      appendMessage(response.text);
-    }
+  // receive message and display it
+  socket.on(messages.RESPONSE_MESSAGE, function(msg) {
+    console.log("socket message: ", msg);
+    msg.error && alert(msg.error);
+    msg.text && appendMessage(msg.text);
+    msg.chat && appendChatMessage(msg.chat);
   });
 
   function appendMessage(msg) {
@@ -30,7 +30,12 @@ $(function() {
     $('html, body').scrollTop( $(document).height() );
   }
 
-  socket.emit(messages.COMMAND_MESSAGE, 'look');
+  function appendChatMessage(msg) {
+    let d = $('<div>');
+    d.append(msg);
+    $('#chat-messages').append(d);
+    $('html, body').scrollTop( $(document).height() );
+  }
 });
 
 

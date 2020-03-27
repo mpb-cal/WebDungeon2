@@ -87,6 +87,12 @@ function createUser(user) {
   };
 }
 
+function dropUser(user) {
+  log(`Dropping user ${user.name}`);
+
+  delete m_users[user.name];
+}
+
 // mpb! avoid same name as user
 /**
  * Creates a new non-player character (NPC) in the game.
@@ -109,6 +115,24 @@ function createNPC(npc) {
 }
 
 
+function getWorldMap() {
+  let roomList = '';
+
+  [...worldMap.rooms.keys()].forEach((x) => {
+    if (typeof worldMap.rooms[x] !== 'undefined') {
+      [...worldMap.rooms[x].keys()].forEach((y) => {
+        if (typeof worldMap.rooms[x][y] !== 'undefined') {
+          const room = worldMap.rooms[x][y];
+          roomList += `${x}, ${y}: ${room.description} Items: ${room.items}<br>`;
+        }
+      });
+    }
+  });
+
+  return roomList;
+}
+
+
 /**
  */
 function getPlayersView(username) {
@@ -124,8 +148,8 @@ function getPlayersView(username) {
 /**
  */
 function getRoom(x, y) {
-  if (typeof worldMap[x] !== 'undefined') {
-    return worldMap[x][y];
+  if (typeof worldMap.rooms[x] !== 'undefined') {
+    return worldMap.rooms[x][y];
   }
 }
 
@@ -158,7 +182,7 @@ function getOccupantNames( roomX, roomY ) {
 
 
 function getOccupants( roomX, roomY ) {
-  getOccupantNames( roomX, roomY )
+  return getOccupantNames( roomX, roomY )
     .sort()
     .map(e => usernameToOccupant(e))  // converted to list of occupant objects
   ;
@@ -189,8 +213,8 @@ function canTravel(fromX, fromY, direction) {
   if (direction == common.CMD_EAST) { newX++; }
   if (direction == common.CMD_WEST) { newX--; }
 
-  if (!worldMap[newX]) return false;
-  if (!worldMap[newX][newY]) return false;
+  if (!worldMap.rooms[newX]) return false;
+  if (!worldMap.rooms[newX][newY]) return false;
 
   const idx1 = fromX + ',' + fromY;
   const idx2 = newX + ',' + newY;
@@ -469,15 +493,17 @@ function cmdMap()
 */
 
 module.exports = {
-  reset: reset,
-  createUser: createUser,
-  getUserByName: getUserByName,
-  getUsers: getUsers,
-  createNPC: createNPC,
-  getPlayersView: getPlayersView,
-  canTravel: canTravel,
-  getUsernames: getUsernames,
-  getOccupants: getOccupants,
-  getOccupantNames: getOccupantNames,
+  reset,
+  createUser,
+  dropUser,
+  getUserByName,
+  getUsers,
+  createNPC,
+  getPlayersView,
+  canTravel,
+  getUsernames,
+  getOccupants,
+  getOccupantNames,
+  getWorldMap,
 };
 

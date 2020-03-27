@@ -80,20 +80,20 @@ for (let y=70; y<=110; y++) {
 
 //makeRoom( 100, 100 );
 
+  /*
 [...rooms.keys()].forEach((x) => {
 	if (typeof rooms[x] !== 'undefined') {
     [...rooms[x].keys()].forEach((y) => {
-  /*
       print 
         "[" . x "][" . y . "]" .
         "[" . rooms[x][y]['id'] . "]" .
         "[" . rooms[x][y]['desc'] . "]" .
         "[" . rooms[x][y]['items'] . "]" .
         "\n";
-  */
     })
   }
 });
+  */
 
 function makeRoom(x, y) {
 	if (x < 1 || x > 200 || y < 1 || y > 200)
@@ -109,7 +109,7 @@ function makeRoom(x, y) {
 	let color = sprintf( "#%02X%02X%02X", (x-50) * 4, (y-50) * 4, 200 );
 
 	let desc = `<span style="background-color: ${color}; ">`;
-	desc += d[x][y];
+	typeof d[x][y] !== 'undefined' && (desc += d[x][y]);
 	desc += ` (Location ${roomId})`;
 	desc += "</span>";
 
@@ -119,7 +119,7 @@ function makeRoom(x, y) {
 
 	rooms[x][y] = {
     id: roomId,
-    desc: desc,
+    description: desc,
     items: items,
   };
 

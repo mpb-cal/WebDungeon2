@@ -26,19 +26,20 @@ io.on('connection', function(socket) {
   const username = socket.id;
   sockets[username] = socket;
   const result = dungeon.adminCommand(common.CMD_CREATE_USER, username);
-  log(`user ${username}: result:`);
+  console.log(`user ${username}: result:`);
   console.log(result);
 
-  log(`user ${username}: connected`);
+  console.log(`user ${username}: connected`);
 
   socket.on('disconnect', function() {
-    log(`user ${username}: disconnected`);
+    console.log(`user ${username}: disconnected`);
+    const result = dungeon.adminCommand(common.CMD_DROP_USER, username);
   });
 
   socket.on(messages.COMMAND_MESSAGE, function(msg) {
-    log(`user ${username}: ${messages.COMMAND_MESSAGE} received: ${msg}`);
+    console.log(`user ${username}: ${messages.COMMAND_MESSAGE} received: ${msg}`);
     const result = dungeon.playerCommand(username, msg);
-    log(`user ${username}: result:`);
+    console.log(`user ${username}: result:`);
     console.log(result);
     sendToUser(username, result);
   });
@@ -46,12 +47,12 @@ io.on('connection', function(socket) {
 
 
 http.listen(PORT, function() {
-  log(`listening on port ${PORT}`);
+  console.log(`listening on port ${PORT}`);
 });
 
 
 function sendToAllUsers(message) {
-  log(`sendToAllUsers: ${message}`);
+  console.log(`sendToAllUsers: ${message}`);
   io.emit(messages.RESPONSE_MESSAGE, message);
 }
 
@@ -59,14 +60,9 @@ function sendToAllUsers(message) {
 function sendToUser(username, message) {
   const socket = sockets[username];
   if (socket) {
-    log(`sendToUser: ${message}`);
+    console.log(`sendToUser: ${message}`);
     socket.emit(messages.RESPONSE_MESSAGE, message);
   }
-}
-
-
-function log(msg) {
-  console.log(`index.js: ${msg}`);
 }
 
 
