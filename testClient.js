@@ -5,13 +5,13 @@ const common = require('./common');
 
 socket.emit(messages.COMMAND_MESSAGE, common.CMD_LOOK);
 socket.emit(messages.COMMAND_MESSAGE, common.CMD_CHAT + ' hello from test');
-socket.emit(messages.COMMAND_MESSAGE, common.CMD_NORTH);
-socket.emit(messages.COMMAND_MESSAGE, common.CMD_SOUTH);
-socket.emit(messages.COMMAND_MESSAGE, common.CMD_CHAT + ' I\'m back!');
+//socket.emit(messages.COMMAND_MESSAGE, common.CMD_NORTH);
+//socket.emit(messages.COMMAND_MESSAGE, common.CMD_SOUTH);
+//socket.emit(messages.COMMAND_MESSAGE, common.CMD_CHAT + ' I\'m back!');
 
-/*
+
 socket.on(messages.RESPONSE_MESSAGE, function(msg) {
   console.log("socket message: ", msg);
 });
-*/
+
 

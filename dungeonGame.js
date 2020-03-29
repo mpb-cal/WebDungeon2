@@ -1,7 +1,7 @@
 
 /* eslint-disable no-console */
 
-//const fs = require('fs');
+const path = require('path');
 const util = require('./util');
 const common = require('./common');
 const worldMap = require('./worldMap');
@@ -16,7 +16,7 @@ let m_users = {};
 let m_npcs = {};
 
 function log(msg) {
-  console.log(`dungeonGame.js: ${msg}`);
+  console.log(`${path.basename(__filename)}: ${msg}`);
 }
 
 
@@ -87,10 +87,10 @@ function createUser(user) {
   };
 }
 
-function dropUser(user) {
-  log(`Dropping user ${user.name}`);
+function dropUser(username) {
+  log(`Dropping user ${username}`);
 
-  delete m_users[user.name];
+  delete m_users[username];
 }
 
 // mpb! avoid same name as user
@@ -163,6 +163,7 @@ function getRoomState(x, y) {
     coords: {x: x, y: y},
     description: (typeof room === 'undefined' ? '' : room.description),
     items: (typeof room === 'undefined' ? '' : room.items),
+    bgColor: (typeof room === 'undefined' ? '' : room.bgColor),
     occupants: getOccupants(x, y),
     npcs: getNPCs(x, y),
   };

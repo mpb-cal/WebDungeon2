@@ -106,12 +106,13 @@ function makeRoom(x, y) {
 	if (Math.random() * 10 == 0) items += `dagger_${roomId},`;
 	items.replace(/,$/, '');
 
-	let color = sprintf( "#%02X%02X%02X", (x-50) * 4, (y-50) * 4, 200 );
+	let bgColor = sprintf( "#%02X%02X%02X", (x-50) * 4, (y-50) * 4, 200 );
 
-	let desc = `<span style="background-color: ${color}; ">`;
+	//let desc = `<span style="background-color: ${color}; ">`;
+	let desc = '';
 	typeof d[x][y] !== 'undefined' && (desc += d[x][y]);
 	desc += ` (Location ${roomId})`;
-	desc += "</span>";
+	//desc += "</span>";
 
 	if (typeof rooms[x] === 'undefined') {
     rooms[x] = [];
@@ -121,6 +122,7 @@ function makeRoom(x, y) {
     id: roomId,
     description: desc,
     items: items,
+    bgColor: bgColor,
   };
 
 	roomId++;

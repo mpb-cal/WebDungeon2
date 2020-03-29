@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 
+const path = require('path');
 const express = require('express');
 const app = express();
 const http = require('http').Server(app);
@@ -12,6 +13,11 @@ const PORT = 5500;
 let sockets = {};
 
 app.use(express.static('static'));
+
+function log(...args) {
+  console.log(path.basename(__filename) + ': ');
+  console.dir(args, {depth: null});
+}
 
 const dungeon = new Dungeon;
 dungeon.adminCommand(common.CMD_RESET_GAME); // mpb! misspelled not caught
@@ -26,33 +32,31 @@ io.on('connection', function(socket) {
   const username = socket.id;
   sockets[username] = socket;
   const result = dungeon.adminCommand(common.CMD_CREATE_USER, username);
-  console.log(`user ${username}: result:`);
-  console.log(result);
+  log(`user ${username}: result:`);
+  log(result);
 
-  console.log(`user ${username}: connected`);
+  log(`user ${username}: connected`);
 
   socket.on('disconnect', function() {
-    console.log(`user ${username}: disconnected`);
+    log(`user ${username}: disconnected`);
     const result = dungeon.adminCommand(common.CMD_DROP_USER, username);
   });
 
   socket.on(messages.COMMAND_MESSAGE, function(msg) {
-    console.log(`user ${username}: ${messages.COMMAND_MESSAGE} received: ${msg}`);
+    log(`user ${username}: ${messages.COMMAND_MESSAGE} received: ${msg}`);
     const result = dungeon.playerCommand(username, msg);
-    console.log(`user ${username}: result:`);
-    console.log(result);
     sendToUser(username, result);
   });
 });
 
 
 http.listen(PORT, function() {
-  console.log(`listening on port ${PORT}`);
+  log(`listening on port ${PORT}`);
 });
 
 
 function sendToAllUsers(message) {
-  console.log(`sendToAllUsers: ${message}`);
+  log(`sendToAllUsers: ${message}`);
   io.emit(messages.RESPONSE_MESSAGE, message);
 }
 
@@ -60,7 +64,7 @@ function sendToAllUsers(message) {
 function sendToUser(username, message) {
   const socket = sockets[username];
   if (socket) {
-    console.log(`sendToUser: ${message}`);
+    log('sendToUser: ', message);
     socket.emit(messages.RESPONSE_MESSAGE, message);
   }
 }

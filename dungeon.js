@@ -68,7 +68,7 @@ class Dungeon extends EventEmitter {
       });
 
       this.sendUpdateToRoom(x, y, {text: `${username} enters the game.`}, [username] );
-      //this.sendUpdateToRoom( $x, $y, printOccupants( $x, $y ) );
+      this.sendUpdateToRoom(x, y, getOccupants(x, y));
 
       return common.RESP_OK;
     } else if (command == common.CMD_DROP_USER) {
@@ -89,6 +89,7 @@ class Dungeon extends EventEmitter {
       dungeonGame.dropUser(username);
 
       this.sendUpdateToRoom(user.x, user.y, {text: `${username} leaves the game.`});
+      this.sendUpdateToRoom(user.x, user.y, getOccupants(user.x, user.y));
 
       return common.RESP_OK;
     }
@@ -103,7 +104,7 @@ class Dungeon extends EventEmitter {
       $y = 100;
       createNPC( $name, $x, $y, array(), 10 );
       this.sendUpdateToRoom( $x, $y, serverNotice( "$name enters the game." ) );
-      this.sendUpdateToRoom( $x, $y, printOccupants( $x, $y ) );
+      this.sendUpdateToRoom( $x, $y, getOccupants( $x, $y ) );
       $response = xmlResponse( "ok" );
     }
     elseif (command == "users")
@@ -215,11 +216,7 @@ class Dungeon extends EventEmitter {
     // return { error: '...' }
    
     if (command == common.CMD_LOOK) {
-      const playersView = dungeonGame.getPlayersView(username);
-      return {
-        text: playersView.room.description,
-        ...playersView,
-      };
+      return dungeonGame.getPlayersView(username);
     } else if (command == common.CMD_WORLD_MAP) {
       return {
         text: dungeonGame.getWorldMap()
@@ -271,7 +268,7 @@ class Dungeon extends EventEmitter {
           {text: username + ' exits ' + EXITS_TO[command]},
           [username]
         );
-        //this.sendUpdateToRoom( oldX, oldY, printOccupants( oldX, oldY ) );
+        //this.sendUpdateToRoom( oldX, oldY, getOccupants( oldX, oldY ) );
         //this.sendUpdateToRoom( oldX, oldY, printNPCs( oldX, oldY ) );
         this.sendUpdateToRoom(
           newX,
@@ -280,14 +277,11 @@ class Dungeon extends EventEmitter {
           ,
           [username]
         );
-        //this.sendUpdateToRoom( newX, newY, printOccupants( newX, newY ) );
+        //this.sendUpdateToRoom( newX, newY, getOccupants( newX, newY ) );
         //this.sendUpdateToRoom( newX, newY, printNPCs( newX, newY ) );
 
         const playersView = dungeonGame.getPlayersView(username);
-        return {
-          text: playersView.room.description,
-          ...playersView,
-        };
+        return playersView;
       } else {
         return {
           error: 'blocked',
@@ -398,7 +392,7 @@ class Dungeon extends EventEmitter {
           $m_npcs = $newNPCs;
         }
 
-        this.sendUpdateToRoom( $r_userX, $r_userY, printOccupants( $r_userX, $r_userY ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, getOccupants( $r_userX, $r_userY ) );
         this.sendUpdateToRoom( $r_userX, $r_userY, printNPCs( $r_userX, $r_userY ) );
 
         $response = xmlResponse( "ok: $damage damage" );
@@ -423,7 +417,7 @@ class Dungeon extends EventEmitter {
           $m_users = $newUsers;
         }
 
-        this.sendUpdateToRoom( $r_userX, $r_userY, printOccupants( $r_userX, $r_userY ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, getOccupants( $r_userX, $r_userY ) );
         this.sendUpdateToRoom( $r_userX, $r_userY, printNPCs( $r_userX, $r_userY ) );
 
         $response = xmlResponse( "ok: $damage damage" );
@@ -541,33 +535,15 @@ function printUser( $username )
 
   return $text;
 }
+*/
 
-function printOccupants( $roomX, $roomY )
-{
-  global $m_users;
-
-  $text = '<occupants>';
-
-  $usernames = array_keys( $m_users );
-  sort( $usernames );
-
-  foreach ($usernames as $username)
-  {
-    $userX = $m_users[$username]['x'];
-    $userY = $m_users[$username]['y'];
-    $userHealth = $m_users[$username]['health'];
-
-    if ($userX == $roomX and $userY == $roomY)
-    {
-      $text .= "<occupant health=\"$userHealth\">$username</occupant>";
-    }
-  }
-
-  $text .= '</occupants>';
-
-  return $text;
+function getOccupants(roomX, roomY) {
+  return {
+    occupants: dungeonGame.getOccupants(roomX, roomY)
+  };
 }
 
+/*
 function printNPC( $name )
 {
   global $m_npcs;
