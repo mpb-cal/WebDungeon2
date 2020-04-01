@@ -24,6 +24,8 @@ class Dungeon extends EventEmitter {
       case common.CMD_RESET_GAME:
         dungeonGame.reset();
         dungeonGame.createUser('mpb');
+        dungeonGame.createUser('martin');
+        dungeonGame.createUser('isabel');
 
         return common.RESP_OK;
         break;
@@ -38,11 +40,13 @@ class Dungeon extends EventEmitter {
           }
 
           dungeonGame.createUser(username);
+/*
           const user = dungeonGame.getUserByName(username);
 
           this.sendUpdateToUser(username, {character: {name: username, }});
           this.sendUpdateToRoom(user.x, user.y, {text: `${username} enters the game.`}, [username] );
           this.sendUpdateToRoom(user.x, user.y, getAllOccupants(user.x, user.y));
+*/
 
           return common.RESP_OK;
         }
@@ -206,7 +210,9 @@ class Dungeon extends EventEmitter {
 
     switch (command) {
       case common.CMD_LOOK:
-        return dungeonGame.getPlayersView(username);
+        this.sendUpdateToUser(username, {character: {name: username, }});
+        this.sendUpdateToUser(username, dungeonGame.getPlayersView(username));
+        this.sendUpdateToUser(username, getAllOccupants(user.x, user.y));
         break;
 
       case common.CMD_WORLD_MAP:
@@ -225,9 +231,6 @@ class Dungeon extends EventEmitter {
       case common.CMD_CHAT:
         const chat = username + ': ' + params.join(' ');
         this.sendUpdateToRoom( user.x, user.y, {chat} );
-        break;
-
-      case common.CMD_CHAT:
         break;
 
       case common.CMD_NORTH:

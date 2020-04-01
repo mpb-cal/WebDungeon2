@@ -27,7 +27,7 @@ class GamePanel extends React.Component {
     };
     this.cmdInputRef = React.createRef();
     this.messagePanelRef = React.createRef();
-    this.username = 'mpb1';
+    this.username = 'mpb';
     this.password = '123';
   }
 
