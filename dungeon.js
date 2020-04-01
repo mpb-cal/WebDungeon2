@@ -20,80 +20,73 @@ class Dungeon extends EventEmitter {
   adminCommand(command = '', ...params) {
     log(`adminCommand: ${command} ${params}`);
 
-    if (command == common.CMD_RESET_GAME) {
-      dungeonGame.reset();
+    switch (command) {
+      case common.CMD_RESET_GAME:
+        dungeonGame.reset();
+        dungeonGame.createUser('mpb');
 
-      dungeonGame.createUser({
-        name: 'mpb',
-        x: 100,
-        y: 100,
-        inventory: [],
-        health: 100
-      });
+        return common.RESP_OK;
+        break;
 
-      dungeonGame.createUser({
-        name: 'charlie',
-        x: 100,
-        y: 100,
-        inventory: [],
-        health: 100
-      });
+      case common.CMD_CREATE_USER:
+        {
+          const username = params[0];
+          if (!this.isValidUsername( username )) {
+            return {
+              error: 'error: invalid username: ' + username,
+            };
+          }
 
-      dungeonGame.createUser({
-        name: common.TEST_USER,
-        x: 100,
-        y: 100,
-        inventory: [],
-        health: 100
-      });
+          dungeonGame.createUser(username);
+          const user = dungeonGame.getUserByName(username);
 
-      return common.RESP_OK;
-    } else if (command == common.CMD_CREATE_USER) {
-      const username = params[0];
-      if (!this.isValidUsername( username )) {
+          this.sendUpdateToUser(username, {character: {name: username, }});
+          this.sendUpdateToRoom(user.x, user.y, {text: `${username} enters the game.`}, [username] );
+          this.sendUpdateToRoom(user.x, user.y, getAllOccupants(user.x, user.y));
+
+          return common.RESP_OK;
+        }
+
+        break;
+
+      case common.CMD_DROP_USER:
+        {
+          const username = params[0];
+          if (!this.isValidUsername( username )) {
+            return {
+              error: 'error: invalid username: ' + username,
+            };
+          }
+
+          const user = dungeonGame.getUserByName(username);
+          if (!user) {
+            return {
+              error: 'unknown username'
+            };
+          }
+
+          dungeonGame.dropUser(username);
+
+          this.sendUpdateToRoom(user.x, user.y, {text: `${username} leaves the game.`}, [username]);
+          this.sendUpdateToRoom(user.x, user.y, getAllOccupants(user.x, user.y));
+          //this.sendUpdateToRoom(user.x, user.y, getOtherOccupants(user.x, user.y, username), [username]);
+
+          return common.RESP_OK;
+        }
+
+        break;
+
+      default:
         return {
-          error: 'error: invalid username: ' + username,
+          error: `Command ${command} not recognized.`,
         };
-      }
-
-      const x = 100;
-      const y = 100;
-
-      dungeonGame.createUser({
-        name: username,
-        x: x,
-        y: y,
-        inventory: [],
-        health: 100
-      });
-
-      this.sendUpdateToRoom(x, y, {text: `${username} enters the game.`}, [username] );
-      this.sendUpdateToRoom(x, y, getOccupants(x, y));
-
-      return common.RESP_OK;
-    } else if (command == common.CMD_DROP_USER) {
-      const username = params[0];
-      if (!this.isValidUsername( username )) {
-        return {
-          error: 'error: invalid username: ' + username,
-        };
-      }
-
-      const user = dungeonGame.getUserByName(username);
-      if (!user) {
-        return {
-          error: 'unknown username'
-        };
-      }
-
-      dungeonGame.dropUser(username);
-
-      this.sendUpdateToRoom(user.x, user.y, {text: `${username} leaves the game.`});
-      this.sendUpdateToRoom(user.x, user.y, getOccupants(user.x, user.y));
-
-      return common.RESP_OK;
     }
+
   /*
+    if (command == common.CMD_RESET_GAME) {
+    } else if (command == common.CMD_CREATE_USER) {
+    } else if (command == common.CMD_DROP_USER) {
+    }
     elseif (command == "create_npc")
     {
       $name = $params[0];
@@ -104,7 +97,7 @@ class Dungeon extends EventEmitter {
       $y = 100;
       createNPC( $name, $x, $y, array(), 10 );
       this.sendUpdateToRoom( $x, $y, serverNotice( "$name enters the game." ) );
-      this.sendUpdateToRoom( $x, $y, getOccupants( $x, $y ) );
+      this.sendUpdateToRoom( $x, $y, getOtherOccupants( $x, $y ) );
       $response = xmlResponse( "ok" );
     }
     elseif (command == "users")
@@ -211,83 +204,110 @@ class Dungeon extends EventEmitter {
       params = parts.slice(1);
     }
 
-    // convert game object --> user object
-    // return { text: '...' }
-    // return { error: '...' }
-   
+    switch (command) {
+      case common.CMD_LOOK:
+        return dungeonGame.getPlayersView(username);
+        break;
+
+      case common.CMD_WORLD_MAP:
+        return {
+          text: dungeonGame.getWorldMap()
+        };
+        break;
+
+      case common.CMD_CHAR_DETAILS:
+        const char = params[0];
+        return {
+          name: char,
+        };
+        break;
+
+      case common.CMD_CHAT:
+        const chat = username + ': ' + params.join(' ');
+        this.sendUpdateToRoom( user.x, user.y, {chat} );
+        break;
+
+      case common.CMD_CHAT:
+        break;
+
+      case common.CMD_NORTH:
+      case common.CMD_SOUTH:
+      case common.CMD_EAST:
+      case common.CMD_WEST:
+        const oldX = user.x;
+        const oldY = user.y;
+
+        let newX = user.x;
+        let newY = user.y;
+
+        if (command == common.CMD_NORTH) { newY--; }
+        if (command == common.CMD_SOUTH) { newY++; }
+        if (command == common.CMD_EAST) { newX++; }
+        if (command == common.CMD_WEST) { newX--; }
+
+        if (dungeonGame.canTravel(user.x, user.y, command)) {
+          user.x = newX;
+          user.y = newY;
+
+          let ENTERS_FROM = {};
+          ENTERS_FROM[common.CMD_NORTH] = 'south';
+          ENTERS_FROM[common.CMD_SOUTH] = 'north';
+          ENTERS_FROM[common.CMD_EAST] = 'west';
+          ENTERS_FROM[common.CMD_WEST] = 'east';
+
+          let EXITS_TO = {};
+          EXITS_TO[common.CMD_NORTH] = 'north';
+          EXITS_TO[common.CMD_SOUTH] = 'south';
+          EXITS_TO[common.CMD_EAST] = 'east';
+          EXITS_TO[common.CMD_WEST] = 'west';
+
+          this.sendUpdateToRoom(
+            oldX,
+            oldY,
+            {text: username + ' exits ' + EXITS_TO[command]},
+            [username]
+          );
+          this.sendUpdateToRoom(oldX, oldY, getAllOccupants(oldX, oldY));
+          //this.sendUpdateToRoom(oldX, oldY, getOtherOccupants(oldX, oldY, username), [username]);
+          //this.sendUpdateToRoom( oldX, oldY, printNPCs( oldX, oldY ) );
+
+          this.sendUpdateToRoom(
+            newX,
+            newY,
+            {text: username + ' enters from the ' + ENTERS_FROM[command]}
+            ,
+            [username]
+          );
+          this.sendUpdateToRoom(newX, newY, getAllOccupants(newX, newY));
+          //this.sendUpdateToRoom(newX, newY, getOtherOccupants(newX, newY, username), [username]);
+          //this.sendUpdateToRoom( newX, newY, printNPCs( newX, newY ) );
+
+          const playersView = dungeonGame.getPlayersView(username);
+          return playersView;
+        } else {
+          return {
+            error: 'blocked',
+          };
+        }
+        break;
+
+      default:
+        return {
+          error: `Command ${command} not recognized.`,
+        };
+    }
+
+  /*
     if (command == common.CMD_LOOK) {
-      return dungeonGame.getPlayersView(username);
     } else if (command == common.CMD_WORLD_MAP) {
-      return {
-        text: dungeonGame.getWorldMap()
-      };
     } else if (command == common.CMD_CHAR_DETAILS) {
-      const char = params[0];
-      return {
-        name: char,
-      };
     } else if (command == common.CMD_CHAT) {
-      const chat = username + ': ' + params.join(' ');
-      this.sendUpdateToRoom( user.x, user.y, {chat} );
     } else if (
       command == common.CMD_NORTH ||
       command == common.CMD_SOUTH ||
       command == common.CMD_EAST ||
       command == common.CMD_WEST)
     {
-      const oldX = user.x;
-      const oldY = user.y;
-
-      let newX = user.x;
-      let newY = user.y;
-
-      if (command == common.CMD_NORTH) { newY--; }
-      if (command == common.CMD_SOUTH) { newY++; }
-      if (command == common.CMD_EAST) { newX++; }
-      if (command == common.CMD_WEST) { newX--; }
-
-      if (dungeonGame.canTravel(user.x, user.y, command)) {
-        user.x = newX;
-        user.y = newY;
-
-        let ENTERS_FROM = {};
-        ENTERS_FROM[common.CMD_NORTH] = 'south';
-        ENTERS_FROM[common.CMD_SOUTH] = 'north';
-        ENTERS_FROM[common.CMD_EAST] = 'west';
-        ENTERS_FROM[common.CMD_WEST] = 'east';
-
-        let EXITS_TO = {};
-        EXITS_TO[common.CMD_NORTH] = 'north';
-        EXITS_TO[common.CMD_SOUTH] = 'south';
-        EXITS_TO[common.CMD_EAST] = 'east';
-        EXITS_TO[common.CMD_WEST] = 'west';
-
-        this.sendUpdateToRoom(
-          oldX,
-          oldY,
-          {text: username + ' exits ' + EXITS_TO[command]},
-          [username]
-        );
-        //this.sendUpdateToRoom( oldX, oldY, getOccupants( oldX, oldY ) );
-        //this.sendUpdateToRoom( oldX, oldY, printNPCs( oldX, oldY ) );
-        this.sendUpdateToRoom(
-          newX,
-          newY,
-          {text: username + ' enters from the ' + ENTERS_FROM[command]}
-          ,
-          [username]
-        );
-        //this.sendUpdateToRoom( newX, newY, getOccupants( newX, newY ) );
-        //this.sendUpdateToRoom( newX, newY, printNPCs( newX, newY ) );
-
-        const playersView = dungeonGame.getPlayersView(username);
-        return playersView;
-      } else {
-        return {
-          error: 'blocked',
-        };
-      }
-  /*
     elseif (command == 'setPosition')
     {
       $r_userX = $params[0];
@@ -392,7 +412,7 @@ class Dungeon extends EventEmitter {
           $m_npcs = $newNPCs;
         }
 
-        this.sendUpdateToRoom( $r_userX, $r_userY, getOccupants( $r_userX, $r_userY ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, getOtherOccupants( $r_userX, $r_userY ) );
         this.sendUpdateToRoom( $r_userX, $r_userY, printNPCs( $r_userX, $r_userY ) );
 
         $response = xmlResponse( "ok: $damage damage" );
@@ -417,7 +437,7 @@ class Dungeon extends EventEmitter {
           $m_users = $newUsers;
         }
 
-        this.sendUpdateToRoom( $r_userX, $r_userY, getOccupants( $r_userX, $r_userY ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, getOtherOccupants( $r_userX, $r_userY ) );
         this.sendUpdateToRoom( $r_userX, $r_userY, printNPCs( $r_userX, $r_userY ) );
 
         $response = xmlResponse( "ok: $damage damage" );
@@ -426,22 +446,26 @@ class Dungeon extends EventEmitter {
       {
         $response = xmlResponse( "error: invalid target" );
       }
-    }
-  */
     } else {
       return {
         error: `Command ${command} not recognized.`,
       };
     }
+  */
   }
 
   sendUpdateToAll(update) {
     this.emit(Dungeon.SEND_TO_ALL_USERS, update);
   }
 
+  // except is a list of usernames not to send to
   sendUpdateToRoom(x, y, update, except = []) {
     _.difference(dungeonGame.getOccupantNames(x, y), except)
-      .forEach((username) => this.emit(Dungeon.SEND_TO_USER, username, update));
+      .forEach((username) => this.sendUpdateToUser(username, update));
+  }
+
+  sendUpdateToUser(username, update) {
+    this.emit(Dungeon.SEND_TO_USER, username, update);
   }
 
   isValidUsername(username) {
@@ -537,11 +561,22 @@ function printUser( $username )
 }
 */
 
-function getOccupants(roomX, roomY) {
+function getAllOccupants(roomX, roomY) {
   return {
-    occupants: dungeonGame.getOccupants(roomX, roomY)
+    occupants: dungeonGame
+      .getOccupants(roomX, roomY)
   };
 }
+
+/*
+function getOtherOccupants(roomX, roomY, username) {
+  return {
+    occupants: dungeonGame
+      .getOccupants(roomX, roomY)
+      .filter((e,i,a) => (e.username !== username))
+  };
+}
+*/
 
 /*
 function printNPC( $name )
