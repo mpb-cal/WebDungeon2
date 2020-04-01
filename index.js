@@ -12,61 +12,58 @@ const messages = require('./static/messages');
 const PORT = 5500;
 let sockets = {};
 
-app.use(express.static('static'));
-
 function log(...args) {
   console.log(path.basename(__filename) + ': ');
   console.dir(args, {depth: null});
 }
 
+// io.emit() for messages to all connections
+// socket.broadcast.emit() for messages to connections other than socket
+// socket.emit() for messages to socket only
+
+function sendToAllUsers(message) {
+  //log(`sendToAllUsers: ${message}`);
+  io.emit(messages.RESPONSE_MESSAGE, message);
+}
+
+function sendToUser(socketId, message) {
+  const socket = sockets[socketId];
+  if (socket) {
+    //log('sendToUser: ', message);
+    socket.emit(messages.RESPONSE_MESSAGE, message);
+  }
+}
+
+app.use(express.static('static'));
 const dungeon = new Dungeon;
 dungeon.adminCommand(common.CMD_RESET_GAME); // mpb! misspelled not caught
 dungeon.on(Dungeon.SEND_TO_ALL_USERS, sendToAllUsers);
 dungeon.on(Dungeon.SEND_TO_USER, sendToUser);
 
-io.on('connection', function(socket) {
-  // io.emit() for messages to all connections
-  // socket.broadcast.emit() for messages to connections other than this one
-  // socket.emit() for messages to this connection only
+io.on('connection', (socket) => {
+  // handle incoming connection
+  const socketId = socket.id;
+  sockets[socketId] = socket;
+  const result = dungeon.adminCommand(common.CMD_CREATE_USER, socketId);
+  log(`user connected on socket ${socketId}`);
 
-  const username = socket.id;
-  sockets[username] = socket;
-  const result = dungeon.adminCommand(common.CMD_CREATE_USER, username);
-  log(`user ${username}: result:`);
-  log(result);
-
-  log(`user ${username}: connected`);
-
-  socket.on('disconnect', function() {
-    log(`user ${username}: disconnected`);
-    const result = dungeon.adminCommand(common.CMD_DROP_USER, username);
+  // handle client disconnect
+  socket.on('disconnect', () => {
+    log(`user disconnected on ${socketId}`);
+    const result = dungeon.adminCommand(common.CMD_DROP_USER, socketId);
   });
 
-  socket.on(messages.COMMAND_MESSAGE, function(msg) {
-    log(`user ${username}: ${messages.COMMAND_MESSAGE} received: ${msg}`);
-    const result = dungeon.playerCommand(username, msg);
-    sendToUser(username, result);
+  // start receiving commands from client
+  socket.on(messages.COMMAND_MESSAGE, (username, password, cmd) => {
+    log(`socket ${socketId}, user ${username}: COMMAND_MESSAGE received: ${cmd}`);
+    const result = dungeon.playerCommand(socketId, cmd);
+    sendToUser(socketId, result);
   });
 });
 
 
-http.listen(PORT, function() {
+http.listen(PORT, () => {
   log(`listening on port ${PORT}`);
 });
-
-
-function sendToAllUsers(message) {
-  log(`sendToAllUsers: ${message}`);
-  io.emit(messages.RESPONSE_MESSAGE, message);
-}
-
-
-function sendToUser(username, message) {
-  const socket = sockets[username];
-  if (socket) {
-    log('sendToUser: ', message);
-    socket.emit(messages.RESPONSE_MESSAGE, message);
-  }
-}
 
 

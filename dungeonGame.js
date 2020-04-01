@@ -9,6 +9,9 @@ const worldMap = require('./worldMap');
 const DATA_DIR = '_data';
 const ROOMS_JSON = DATA_DIR + '/rooms.json';
 const DOORS_JSON = DATA_DIR + '/doors.json';
+const USER_START_X = 100;
+const USER_START_Y = 100;
+const USER_START_HEALTH = 100;
 
 //let m_rooms = [];
 let m_doors = {};
@@ -19,16 +22,17 @@ function log(msg) {
   console.log(`${path.basename(__filename)}: ${msg}`);
 }
 
-
 /**
  * Resets the game.
  */
 function reset() {
+/*
   // load rooms
-  //m_rooms = util.readJSONFile(ROOMS_JSON);
+  m_rooms = util.readJSONFile(ROOMS_JSON);
 
   //util.writeJSONFile(ROOMS_JSON, m_rooms);
-  //saveRooms();
+  saveRooms();
+*/
 
   // load doors
   m_doors = util.readJSONFile(DOORS_JSON);
@@ -39,13 +43,11 @@ function reset() {
   m_users = {};
 }
 
-
 /*
 function saveRooms() {
   util.writeJSONFile(ROOMS_JSON, m_rooms);
 }
 */
-
 
 /**
  * Returns a user looked up by its name.
@@ -56,34 +58,26 @@ function getUserByName(name) {
   return m_users[name];
 }
 
-
 function getUsers() {
   return m_users;
 }
-
 
 function getUsernames() {
   return Object.keys(m_users);
 }
 
-
 /**
  * Creates a new user in the game.
- * @param {Object} user - The new user.
- * @param {string} user.name - The name of the user. Avoid same name as an NPC.
- * @param {number} user.x - The user's starting X position.
- * @param {number} user.y - The user's starting Y position.
- * @param {array} user.inventory - The user's starting inventory.
- * @param {number} user.health - The user's starting health (1 - 100).
+ * @param {string} username - The name of the user. Avoid same name as an NPC.
  */
-function createUser(user) {
-  log(`Adding user ${user.name}`);
+function createUser(username) {
+  log(`Adding user ${username}`);
 
-  m_users[user.name] = {
-    x: user.x,
-    y: user.y,
-    inventory: user.inventory,
-    health: user.health,
+  m_users[username] = {
+    x: USER_START_X,
+    y: USER_START_Y,
+    inventory: [],
+    health: USER_START_HEALTH,
   };
 }
 
@@ -114,7 +108,6 @@ function createNPC(npc) {
   };
 }
 
-
 function getWorldMap() {
   let roomList = '';
 
@@ -132,7 +125,6 @@ function getWorldMap() {
   return roomList;
 }
 
-
 /**
  */
 function getPlayersView(username) {
@@ -144,7 +136,6 @@ function getPlayersView(username) {
   };
 }
 
-
 /**
  */
 function getRoom(x, y) {
@@ -152,7 +143,6 @@ function getRoom(x, y) {
     return worldMap.rooms[x][y];
   }
 }
-
 
 /**
  */
@@ -164,23 +154,20 @@ function getRoomState(x, y) {
     description: (typeof room === 'undefined' ? '' : room.description),
     items: (typeof room === 'undefined' ? '' : room.items),
     bgColor: (typeof room === 'undefined' ? '' : room.bgColor),
-    occupants: getOccupants(x, y),
+    //occupants: getOccupants(x, y),
     npcs: getNPCs(x, y),
   };
 }
 
-
 function usernameToOccupant(username) {
   return { username: username, health: m_users[username].health };
 }
-
 
 function getOccupantNames( roomX, roomY ) {
   return Object.keys(m_users) // list of usernames
     .filter(e => m_users[e].x == roomX && m_users[e].y == roomY)  // only those in this room
   ;
 }
-
 
 function getOccupants( roomX, roomY ) {
   return getOccupantNames( roomX, roomY )
@@ -189,12 +176,10 @@ function getOccupants( roomX, roomY ) {
   ;
 }
 
-
 function npcnameToNPC(npcname) {
   const npc = m_npcs[npcname];
   return { username: npcname, x: npc.x, y: npc.y, health: npc.health };
 }
-
 
 function getNPCs(roomX, roomY) {
   return Object.keys(m_npcs) // list of usernames
@@ -203,7 +188,6 @@ function getNPCs(roomX, roomY) {
     .map(e => npcnameToNPC(e))  // converted to list of npc objects
   ;
 }
-
 
 function canTravel(fromX, fromY, direction) {
   let newX = fromX;
@@ -230,21 +214,16 @@ function canTravel(fromX, fromY, direction) {
   return false;
 }
 
-
 /*
 function saveDoors() {
   util.writeJSONFile(DOORS_JSON, m_doors);
 }
-*/
 
-/*
-function serverNotice( $notice )
-{
+function serverNotice( $notice ) {
   return "<chat>$notice</chat>";
 }
 
-function sendUpdateToRoom( $x, $y, $update )
-{
+function sendUpdateToRoom( $x, $y, $update ) {
   global $m_users;
 
   $updateNames = array();
@@ -272,8 +251,7 @@ function sendUpdateToRoom( $x, $y, $update )
   }
 }
 
-function printInventory( $username )
-{
+function printInventory( $username ) {
   global $m_users;
 
   $text = '';
@@ -288,8 +266,7 @@ function printInventory( $username )
   return $text;
 }
 
-function printPlayer( $username, $x, $y )
-{
+function printPlayer( $username, $x, $y ) {
   $text = 
     printUser( $username ) .
     "<inventory>" . printInventory( $username ) . "</inventory>" .
@@ -301,8 +278,7 @@ function printPlayer( $username, $x, $y )
   return $text;
 }
 
-function printUser( $username )
-{
+function printUser( $username ) {
   global $m_users;
 
   $x = $m_users[$username]['x'];
@@ -314,8 +290,7 @@ function printUser( $username )
   return $text;
 }
 
-function cmdRooms()
-{
+function cmdRooms() {
   global $m_rooms;
 
   $text = "<rooms>";
@@ -333,16 +308,14 @@ function cmdRooms()
   return $text;
 }
 
-function doorLink( $x, $y, $dir )
-{
+function doorLink( $x, $y, $dir ) {
   if (canTravel( $x, $y, $dir ))
     return "<a href=\"command.php?p_user=mpb&p_command=closeDoor&p_params=$x $y $dir\">close</a>";
   else
     return "<a href=\"command.php?p_user=mpb&p_command=openDoor&p_params=$x $y $dir\">open</a>";
 }
 
-function cmdMap()
-{
+function cmdMap() {
   global $m_rooms, $m_users, $m_npcs;
 
   $text = '';
