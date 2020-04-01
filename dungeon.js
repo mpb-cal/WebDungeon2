@@ -1,5 +1,3 @@
-'use strict';
-
 /* eslint-disable no-console*/
 
 const EventEmitter = require('events');
@@ -7,435 +5,453 @@ const dungeonGame = require('./dungeonGame');
 const common = require('./common');
 //const util = require('./util');
 const _ = require('underscore');
+const path = require('path');
 
 function log(msg) {
-  console.log(`dungeon.js: ${msg}`);
+  console.log(`${path.basename(__filename)}: ${msg}`);
 }
 
 
-function Dungeon() {
-  EventEmitter.apply(this, arguments);
-}
+class Dungeon extends EventEmitter {
+  // event types emitted by this class:
+  static SEND_TO_ALL_USERS = '_sendToAllUsers';
+  static SEND_TO_USER = '_sendToUser';
 
-Dungeon.prototype = Object.create(EventEmitter.prototype);
+  adminCommand(command = '', ...params) {
+    log(`adminCommand: ${command} ${params}`);
 
-Dungeon.prototype.SEND_TO_ALL_USERS = 'sendToAllUsers';
-Dungeon.prototype.SEND_TO_USER = 'sendToUser';
+    if (command == common.CMD_RESET_GAME) {
+      dungeonGame.reset();
 
-Dungeon.prototype.adminCommand = function (command = '', ...params) {
-  log(`adminCommand: ${command} ${params}`);
+      dungeonGame.createUser({
+        name: 'mpb',
+        x: 100,
+        y: 100,
+        inventory: [],
+        health: 100
+      });
 
-  if (command == common.CMD_RESET_GAME) {
-    dungeonGame.reset();
+      dungeonGame.createUser({
+        name: 'charlie',
+        x: 100,
+        y: 100,
+        inventory: [],
+        health: 100
+      });
 
-    dungeonGame.createUser({
-      name: 'mpb',
-      x: 100,
-      y: 100,
-      inventory: [],
-      health: 100
-    });
+      dungeonGame.createUser({
+        name: common.TEST_USER,
+        x: 100,
+        y: 100,
+        inventory: [],
+        health: 100
+      });
 
-    dungeonGame.createUser({
-      name: 'charlie',
-      x: 100,
-      y: 100,
-      inventory: [],
-      health: 100
-    });
+      return common.RESP_OK;
+    } else if (command == common.CMD_CREATE_USER) {
+      const username = params[0];
+      if (!this.isValidUsername( username )) {
+        return {
+          error: 'error: invalid username: ' + username,
+        };
+      }
 
-    dungeonGame.createUser({
-      name: common.TEST_USER,
-      x: 100,
-      y: 100,
-      inventory: [],
-      health: 100
-    });
+      const x = 100;
+      const y = 100;
 
-    return common.RESP_OK;
-  } else if (command == common.CMD_CREATE_USER) {
-    const username = params[0];
-    if (!this.isValidUsername( username )) {
+      dungeonGame.createUser({
+        name: username,
+        x: x,
+        y: y,
+        inventory: [],
+        health: 100
+      });
+
+      this.sendUpdateToRoom(x, y, {text: `${username} enters the game.`}, [username] );
+      this.sendUpdateToRoom(x, y, getOccupants(x, y));
+
+      return common.RESP_OK;
+    } else if (command == common.CMD_DROP_USER) {
+      const username = params[0];
+      if (!this.isValidUsername( username )) {
+        return {
+          error: 'error: invalid username: ' + username,
+        };
+      }
+
+      const user = dungeonGame.getUserByName(username);
+      if (!user) {
+        return {
+          error: 'unknown username'
+        };
+      }
+
+      dungeonGame.dropUser(username);
+
+      this.sendUpdateToRoom(user.x, user.y, {text: `${username} leaves the game.`});
+      this.sendUpdateToRoom(user.x, user.y, getOccupants(user.x, user.y));
+
+      return common.RESP_OK;
+    }
+  /*
+    elseif (command == "create_npc")
+    {
+      $name = $params[0];
+      if (!this.isValidUsername( $name ))
+        return xmlResponse( 'error: invalid name' );
+
+      $x = 100;
+      $y = 100;
+      createNPC( $name, $x, $y, array(), 10 );
+      this.sendUpdateToRoom( $x, $y, serverNotice( "$name enters the game." ) );
+      this.sendUpdateToRoom( $x, $y, getOccupants( $x, $y ) );
+      $response = xmlResponse( "ok" );
+    }
+    elseif (command == "users")
+    {
+      $text = '';
+
+      foreach (array_keys( $m_users ) as $k)
+      {
+        $text .= printUser( $k );
+      }
+
+      $response = xmlResponse( $text );
+    }
+    elseif (command == "npcs")
+    {
+      $text = '';
+
+      foreach (array_keys( $m_npcs ) as $k)
+      {
+        $text .= printNPC( $k );
+      }
+
+      $response = xmlResponse( $text );
+    }
+    elseif (command == 'rooms')
+    {
+      $response = xmlResponse( cmdRooms() );
+    }
+    elseif (command == 'map')
+    {
+      $response = array( cmdMap() );
+    }
+    elseif (command == 'openDoor')
+    {
+      $x = $params[0];
+      $y = $params[1];
+      $dir = $params[2];
+
+      $x2 = $x;
+      $y2 = $y;
+
+      if ($dir == 'north') { $y2--; }
+      if ($dir == 'south') { $y2++; }
+      if ($dir == 'east') { $x2++; }
+      if ($dir == 'west') { $x2--; }
+
+      $m_doors["$x,$y"]["$x2,$y2"] = 1;
+
+      saveDoors();
+
+      $response = array( "<script>location = 'command.php?p_user=mpb&p_command=map'; </script>" );
+    }
+    elseif (command == 'closeDoor')
+    {
+      $x = $params[0];
+      $y = $params[1];
+      $dir = $params[2];
+
+      $x2 = $x;
+      $y2 = $y;
+
+      if ($dir == 'north') { $y2--; }
+      if ($dir == 'south') { $y2++; }
+      if ($dir == 'east') { $x2++; }
+      if ($dir == 'west') { $x2--; }
+
+      $m_doors["$x,$y"]["$x2,$y2"] = 0;
+      $m_doors["$x2,$y2"]["$x,$y"] = 0;
+
+      saveDoors();
+
+      $response = array( "<script>location = 'command.php?p_user=mpb&p_command=map'; </script>" );
+    }
+    else
+    {
+      $response = xmlResponse( "<error>Command command not recognized.</error>" );
+    }
+
+    return $response;
+  */
+  }
+
+  playerCommand(username, commandMessage) {
+    log(`playerCommand: ${username}, ${commandMessage}`);
+
+    if (!this.isValidUsername(username)) { 
       return {
-        error: 'error: invalid username: ' + username,
+        error: 'invalid username'
       };
     }
 
-    const x = 100;
-    const y = 100;
-
-    dungeonGame.createUser({
-      name: username,
-      x: x,
-      y: y,
-      inventory: [],
-      health: 100
-    });
-
-    this.sendUpdateToRoom(x, y, `${username} enters the game.`, [username] );
-    //this.sendUpdateToRoom( $x, $y, printOccupants( $x, $y ) );
-
-    return common.RESP_OK;
-  }
-/*
-  elseif (command == "create_npc")
-  {
-    $name = $params[0];
-    if (!this.isValidUsername( $name ))
-      return xmlResponse( 'error: invalid name' );
-
-    $x = 100;
-    $y = 100;
-    createNPC( $name, $x, $y, array(), 10 );
-    this.sendUpdateToRoom( $x, $y, serverNotice( "$name enters the game." ) );
-    this.sendUpdateToRoom( $x, $y, printOccupants( $x, $y ) );
-    $response = xmlResponse( "ok" );
-  }
-  elseif (command == "users")
-  {
-    $text = '';
-
-    foreach (array_keys( $m_users ) as $k)
-    {
-      $text .= printUser( $k );
-    }
-
-    $response = xmlResponse( $text );
-  }
-  elseif (command == "npcs")
-  {
-    $text = '';
-
-    foreach (array_keys( $m_npcs ) as $k)
-    {
-      $text .= printNPC( $k );
-    }
-
-    $response = xmlResponse( $text );
-  }
-  elseif (command == 'rooms')
-  {
-    $response = xmlResponse( cmdRooms() );
-  }
-  elseif (command == 'map')
-  {
-    $response = array( cmdMap() );
-  }
-  elseif (command == 'openDoor')
-  {
-    $x = $params[0];
-    $y = $params[1];
-    $dir = $params[2];
-
-    $x2 = $x;
-    $y2 = $y;
-
-    if ($dir == 'north') { $y2--; }
-    if ($dir == 'south') { $y2++; }
-    if ($dir == 'east') { $x2++; }
-    if ($dir == 'west') { $x2--; }
-
-    $m_doors["$x,$y"]["$x2,$y2"] = 1;
-
-    saveDoors();
-
-    $response = array( "<script>location = 'command.php?p_user=mpb&p_command=map'; </script>" );
-  }
-  elseif (command == 'closeDoor')
-  {
-    $x = $params[0];
-    $y = $params[1];
-    $dir = $params[2];
-
-    $x2 = $x;
-    $y2 = $y;
-
-    if ($dir == 'north') { $y2--; }
-    if ($dir == 'south') { $y2++; }
-    if ($dir == 'east') { $x2++; }
-    if ($dir == 'west') { $x2--; }
-
-    $m_doors["$x,$y"]["$x2,$y2"] = 0;
-    $m_doors["$x2,$y2"]["$x,$y"] = 0;
-
-    saveDoors();
-
-    $response = array( "<script>location = 'command.php?p_user=mpb&p_command=map'; </script>" );
-  }
-  else
-  {
-    $response = xmlResponse( "<error>Command command not recognized.</error>" );
-  }
-
-  return $response;
-*/
-};
-
-
-Dungeon.prototype.playerCommand = function (username, commandMessage) {
-  log(`playerCommand: ${username}, ${commandMessage}`);
-
-  if (!this.isValidUsername(username)) { 
-    return {
-      error: 'invalid username'
-    };
-  }
-
-  const user = dungeonGame.getUserByName(username);
-  if (!user) {
-    return {
-      error: 'unknown username'
-    };
-  }
-
-  let command = commandMessage;
-  let params = [];
-  const parts = commandMessage.split(/\s+/);
-  if (parts) {
-    command = parts[0];
-    params = parts.slice(1);
-  }
-
-  // convert game object --> user object
-  // return { text: '...' }
-  // return { error: '...' }
- 
-  if (command == common.CMD_LOOK) {
-    const playersView = dungeonGame.getPlayersView(username);
-    return {
-      text: playersView.room.description
-    };
-  } else if (command == common.CMD_CHAR_DETAILS) {
-    const char = params[0];
-    return {
-      name: char,
-    };
-  } else if (
-    command == common.CMD_NORTH ||
-    command == common.CMD_SOUTH ||
-    command == common.CMD_EAST ||
-    command == common.CMD_WEST)
-  {
-    const oldX = user.x;
-    const oldY = user.y;
-
-    let newX = user.x;
-    let newY = user.y;
-
-    if (command == common.CMD_NORTH) { newY--; }
-    if (command == common.CMD_SOUTH) { newY++; }
-    if (command == common.CMD_EAST) { newX++; }
-    if (command == common.CMD_WEST) { newX--; }
-
-    if (dungeonGame.canTravel(user.x, user.y, command)) {
-      user.x = newX;
-      user.y = newY;
-
-      let ENTERS_FROM = {};
-      ENTERS_FROM[common.CMD_NORTH] = 'south';
-      ENTERS_FROM[common.CMD_SOUTH] = 'north';
-      ENTERS_FROM[common.CMD_EAST] = 'west';
-      ENTERS_FROM[common.CMD_WEST] = 'east';
-
-      let EXITS_TO = {};
-      EXITS_TO[common.CMD_NORTH] = 'north';
-      EXITS_TO[common.CMD_SOUTH] = 'south';
-      EXITS_TO[common.CMD_EAST] = 'east';
-      EXITS_TO[common.CMD_WEST] = 'west';
-
-      this.sendUpdateToRoom( oldX, oldY, username + ' exits ' + EXITS_TO[command], [username] );
-      //this.sendUpdateToRoom( oldX, oldY, printOccupants( oldX, oldY ) );
-      //this.sendUpdateToRoom( oldX, oldY, printNPCs( oldX, oldY ) );
-      this.sendUpdateToRoom( newX, newY, username + ' enters from the ' + ENTERS_FROM[command], [username] );
-      //this.sendUpdateToRoom( newX, newY, printOccupants( newX, newY ) );
-      //this.sendUpdateToRoom( newX, newY, printNPCs( newX, newY ) );
-
-      const playersView = dungeonGame.getPlayersView(username);
+    const user = dungeonGame.getUserByName(username);
+    if (!user) {
       return {
-        text: playersView.room.description
+        error: 'unknown username'
       };
+    }
+
+    let command = commandMessage;
+    let params = [];
+    const parts = commandMessage.split(/\s+/);
+    if (parts) {
+      command = parts[0];
+      params = parts.slice(1);
+    }
+
+    // convert game object --> user object
+    // return { text: '...' }
+    // return { error: '...' }
+   
+    if (command == common.CMD_LOOK) {
+      return dungeonGame.getPlayersView(username);
+    } else if (command == common.CMD_WORLD_MAP) {
+      return {
+        text: dungeonGame.getWorldMap()
+      };
+    } else if (command == common.CMD_CHAR_DETAILS) {
+      const char = params[0];
+      return {
+        name: char,
+      };
+    } else if (command == common.CMD_CHAT) {
+      const chat = username + ': ' + params.join(' ');
+      this.sendUpdateToRoom( user.x, user.y, {chat} );
+    } else if (
+      command == common.CMD_NORTH ||
+      command == common.CMD_SOUTH ||
+      command == common.CMD_EAST ||
+      command == common.CMD_WEST)
+    {
+      const oldX = user.x;
+      const oldY = user.y;
+
+      let newX = user.x;
+      let newY = user.y;
+
+      if (command == common.CMD_NORTH) { newY--; }
+      if (command == common.CMD_SOUTH) { newY++; }
+      if (command == common.CMD_EAST) { newX++; }
+      if (command == common.CMD_WEST) { newX--; }
+
+      if (dungeonGame.canTravel(user.x, user.y, command)) {
+        user.x = newX;
+        user.y = newY;
+
+        let ENTERS_FROM = {};
+        ENTERS_FROM[common.CMD_NORTH] = 'south';
+        ENTERS_FROM[common.CMD_SOUTH] = 'north';
+        ENTERS_FROM[common.CMD_EAST] = 'west';
+        ENTERS_FROM[common.CMD_WEST] = 'east';
+
+        let EXITS_TO = {};
+        EXITS_TO[common.CMD_NORTH] = 'north';
+        EXITS_TO[common.CMD_SOUTH] = 'south';
+        EXITS_TO[common.CMD_EAST] = 'east';
+        EXITS_TO[common.CMD_WEST] = 'west';
+
+        this.sendUpdateToRoom(
+          oldX,
+          oldY,
+          {text: username + ' exits ' + EXITS_TO[command]},
+          [username]
+        );
+        //this.sendUpdateToRoom( oldX, oldY, getOccupants( oldX, oldY ) );
+        //this.sendUpdateToRoom( oldX, oldY, printNPCs( oldX, oldY ) );
+        this.sendUpdateToRoom(
+          newX,
+          newY,
+          {text: username + ' enters from the ' + ENTERS_FROM[command]}
+          ,
+          [username]
+        );
+        //this.sendUpdateToRoom( newX, newY, getOccupants( newX, newY ) );
+        //this.sendUpdateToRoom( newX, newY, printNPCs( newX, newY ) );
+
+        const playersView = dungeonGame.getPlayersView(username);
+        return playersView;
+      } else {
+        return {
+          error: 'blocked',
+        };
+      }
+  /*
+    elseif (command == 'setPosition')
+    {
+      $r_userX = $params[0];
+      $r_userY = $params[1];
+
+      $response = xmlResponse( 'ok' );
+    }
+    elseif (preg_match( "/^drop_(.*)$/", command, $m ))
+    {
+      $dropItem = $m[1];
+      $newInv = array();
+      $hasIt = 0;
+
+      foreach ($r_userInventory as $item)
+      {
+        if ($item == $dropItem)
+        {
+          $hasIt = 1;
+        }
+        else
+        {
+          $newInv[] = $item;
+        }
+      }
+
+      $r_userInventory = $newInv;
+
+      if ($hasIt)
+      {
+        $r_roomItems[] = $dropItem;
+
+        this.sendUpdateToRoom( $r_userX, $r_userY, printItems( $r_userX, $r_userY ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username drops $dropItem." ) );
+
+        $response = xmlResponse( 'ok' );
+      }
+      else
+      {
+        $response = xmlResponse( 'error: invalid item' );
+      }
+    }
+    elseif (preg_match( "/^take_(.*)$/", command, $m ))
+    {
+      $takeItem = $m[1];
+      $newItems = array();
+      $hasIt = 0;
+
+      foreach ($r_roomItems as $item)
+      {
+        if ($item == $takeItem)
+        {
+          $hasIt = 1;
+        }
+        else
+        {
+          $newItems[] = $item;
+        }
+      }
+
+      $r_roomItems = $newItems;
+
+      if ($hasIt)
+      {
+        $r_userInventory[] = $takeItem;
+
+        this.sendUpdateToRoom( $r_userX, $r_userY, printItems( $r_userX, $r_userY ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username takes $takeItem." ) );
+
+        $response = xmlResponse( 'ok' );
+      }
+      else
+      {
+        $response = xmlResponse( 'error: invalid item' );
+      }
+    }
+    elseif (preg_match( "/^attack_(.*)$/", command, $m ))
+    {
+      $targetName = $m[1];
+
+      // mpb! make sure valid target
+
+      if (isset( $m_npcs[$targetName] ))
+      {
+        $damage = rand( 0, 5 );
+        $m_npcs[$targetName]['health'] -= $damage;
+
+        $userDamage = rand( 0, 5 );
+        $r_userHealth -= $userDamage;
+
+        this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username attacks $targetName for $damage damage." ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$targetName attacks $username for $userDamage damage." ) );
+
+        if ($m_npcs[$targetName]['health'] <= 0)
+        {
+          this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username has killed $targetName!" ) );
+
+          $newNPCs = array();
+          foreach (array_keys( $m_npcs ) as $k)
+          {
+            if ($k != $targetName) $newNPCs[$k] = $m_npcs[$k];
+          }
+          $m_npcs = $newNPCs;
+        }
+
+        this.sendUpdateToRoom( $r_userX, $r_userY, getOccupants( $r_userX, $r_userY ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, printNPCs( $r_userX, $r_userY ) );
+
+        $response = xmlResponse( "ok: $damage damage" );
+      }
+      elseif (isset( $m_users[$targetName] ))
+      {
+        $damage = rand( 0, 5 );
+        $m_users[$targetName]['health'] -= $damage;
+
+        this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username attacks $targetName for $damage damage." ) );
+        sendUpdateTo( $targetName, getGameState( $targetName ) );
+
+        if ($m_users[$targetName]['health'] <= 0)
+        {
+          this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username has killed $targetName!" ) );
+
+          $newUsers = array();
+          foreach (array_keys( $m_users ) as $k)
+          {
+            if ($k != $targetName) $newUsers[$k] = $m_users[$k];
+          }
+          $m_users = $newUsers;
+        }
+
+        this.sendUpdateToRoom( $r_userX, $r_userY, getOccupants( $r_userX, $r_userY ) );
+        this.sendUpdateToRoom( $r_userX, $r_userY, printNPCs( $r_userX, $r_userY ) );
+
+        $response = xmlResponse( "ok: $damage damage" );
+      }
+      else
+      {
+        $response = xmlResponse( "error: invalid target" );
+      }
+    }
+  */
     } else {
       return {
-        error: 'blocked',
+        error: `Command ${command} not recognized.`,
       };
     }
-/*
-  elseif (command == 'setPosition')
-  {
-    $r_userX = $params[0];
-    $r_userY = $params[1];
-
-    $response = xmlResponse( 'ok' );
-  }
-  elseif (command == 'chat')
-  {
-    $chat = "$username: " . implode( " ", $params );
-    this.sendUpdateToRoom( $r_userX, $r_userY, "<chat>$chat</chat>" );
-
-    $response = xmlResponse( 'ok' );
-  }
-  elseif (preg_match( "/^drop_(.*)$/", command, $m ))
-  {
-    $dropItem = $m[1];
-    $newInv = array();
-    $hasIt = 0;
-
-    foreach ($r_userInventory as $item)
-    {
-      if ($item == $dropItem)
-      {
-        $hasIt = 1;
-      }
-      else
-      {
-        $newInv[] = $item;
-      }
-    }
-
-    $r_userInventory = $newInv;
-
-    if ($hasIt)
-    {
-      $r_roomItems[] = $dropItem;
-
-      this.sendUpdateToRoom( $r_userX, $r_userY, printItems( $r_userX, $r_userY ) );
-      this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username drops $dropItem." ) );
-
-      $response = xmlResponse( 'ok' );
-    }
-    else
-    {
-      $response = xmlResponse( 'error: invalid item' );
-    }
-  }
-  elseif (preg_match( "/^take_(.*)$/", command, $m ))
-  {
-    $takeItem = $m[1];
-    $newItems = array();
-    $hasIt = 0;
-
-    foreach ($r_roomItems as $item)
-    {
-      if ($item == $takeItem)
-      {
-        $hasIt = 1;
-      }
-      else
-      {
-        $newItems[] = $item;
-      }
-    }
-
-    $r_roomItems = $newItems;
-
-    if ($hasIt)
-    {
-      $r_userInventory[] = $takeItem;
-
-      this.sendUpdateToRoom( $r_userX, $r_userY, printItems( $r_userX, $r_userY ) );
-      this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username takes $takeItem." ) );
-
-      $response = xmlResponse( 'ok' );
-    }
-    else
-    {
-      $response = xmlResponse( 'error: invalid item' );
-    }
-  }
-  elseif (preg_match( "/^attack_(.*)$/", command, $m ))
-  {
-    $targetName = $m[1];
-
-    // mpb! make sure valid target
-
-    if (isset( $m_npcs[$targetName] ))
-    {
-      $damage = rand( 0, 5 );
-      $m_npcs[$targetName]['health'] -= $damage;
-
-      $userDamage = rand( 0, 5 );
-      $r_userHealth -= $userDamage;
-
-      this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username attacks $targetName for $damage damage." ) );
-      this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$targetName attacks $username for $userDamage damage." ) );
-
-      if ($m_npcs[$targetName]['health'] <= 0)
-      {
-        this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username has killed $targetName!" ) );
-
-        $newNPCs = array();
-        foreach (array_keys( $m_npcs ) as $k)
-        {
-          if ($k != $targetName) $newNPCs[$k] = $m_npcs[$k];
-        }
-        $m_npcs = $newNPCs;
-      }
-
-      this.sendUpdateToRoom( $r_userX, $r_userY, printOccupants( $r_userX, $r_userY ) );
-      this.sendUpdateToRoom( $r_userX, $r_userY, printNPCs( $r_userX, $r_userY ) );
-
-      $response = xmlResponse( "ok: $damage damage" );
-    }
-    elseif (isset( $m_users[$targetName] ))
-    {
-      $damage = rand( 0, 5 );
-      $m_users[$targetName]['health'] -= $damage;
-
-      this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username attacks $targetName for $damage damage." ) );
-      sendUpdateTo( $targetName, getGameState( $targetName ) );
-
-      if ($m_users[$targetName]['health'] <= 0)
-      {
-        this.sendUpdateToRoom( $r_userX, $r_userY, serverNotice( "$username has killed $targetName!" ) );
-
-        $newUsers = array();
-        foreach (array_keys( $m_users ) as $k)
-        {
-          if ($k != $targetName) $newUsers[$k] = $m_users[$k];
-        }
-        $m_users = $newUsers;
-      }
-
-      this.sendUpdateToRoom( $r_userX, $r_userY, printOccupants( $r_userX, $r_userY ) );
-      this.sendUpdateToRoom( $r_userX, $r_userY, printNPCs( $r_userX, $r_userY ) );
-
-      $response = xmlResponse( "ok: $damage damage" );
-    }
-    else
-    {
-      $response = xmlResponse( "error: invalid target" );
-    }
-  }
-*/
-  } else {
-    return {
-      error: `Command ${command} not recognized.`,
-    };
-  }
-};
-
-
-Dungeon.prototype.sendUpdateToAll = function(update) {
-  this.emit(this.SEND_TO_ALL_USERS, update);
-};
-
-
-Dungeon.prototype.sendUpdateToRoom = function(x, y, update, except = []) {
-  _.difference(dungeonGame.getOccupantNames(x, y), except)
-    .forEach((username) => this.emit(this.SEND_TO_USER, username, update));
-};
-
-
-Dungeon.prototype.isValidUsername = function(username) {
-  if (username && username.match(/^[\w-]+$/)) {
-    return true;
   }
 
-  return false;
-};
+  sendUpdateToAll(update) {
+    this.emit(Dungeon.SEND_TO_ALL_USERS, update);
+  }
 
+  sendUpdateToRoom(x, y, update, except = []) {
+    _.difference(dungeonGame.getOccupantNames(x, y), except)
+      .forEach((username) => this.emit(Dungeon.SEND_TO_USER, username, update));
+  }
 
+  isValidUsername(username) {
+    if (username && username.match(/^[\w-]+$/)) {
+      return true;
+    }
 
+    return false;
+  }
+}
 
 /*
 function serverNotice( notice )
@@ -519,33 +535,15 @@ function printUser( $username )
 
   return $text;
 }
+*/
 
-function printOccupants( $roomX, $roomY )
-{
-  global $m_users;
-
-  $text = '<occupants>';
-
-  $usernames = array_keys( $m_users );
-  sort( $usernames );
-
-  foreach ($usernames as $username)
-  {
-    $userX = $m_users[$username]['x'];
-    $userY = $m_users[$username]['y'];
-    $userHealth = $m_users[$username]['health'];
-
-    if ($userX == $roomX and $userY == $roomY)
-    {
-      $text .= "<occupant health=\"$userHealth\">$username</occupant>";
-    }
-  }
-
-  $text .= '</occupants>';
-
-  return $text;
+function getOccupants(roomX, roomY) {
+  return {
+    occupants: dungeonGame.getOccupants(roomX, roomY)
+  };
 }
 
+/*
 function printNPC( $name )
 {
   global $m_npcs;

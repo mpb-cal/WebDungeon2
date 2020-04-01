@@ -1,7 +1,6 @@
-'use strict';
-
 /* eslint-disable no-console */
 
+const path = require('path');
 const express = require('express');
 const app = express();
 const http = require('http').Server(app);
@@ -15,10 +14,15 @@ let sockets = {};
 
 app.use(express.static('static'));
 
+function log(...args) {
+  console.log(path.basename(__filename) + ': ');
+  console.dir(args, {depth: null});
+}
+
 const dungeon = new Dungeon;
 dungeon.adminCommand(common.CMD_RESET_GAME); // mpb! misspelled not caught
-dungeon.on(dungeon.SEND_TO_ALL_USERS, sendToAllUsers);
-dungeon.on(dungeon.SEND_TO_USER, sendToUser);
+dungeon.on(Dungeon.SEND_TO_ALL_USERS, sendToAllUsers);
+dungeon.on(Dungeon.SEND_TO_USER, sendToUser);
 
 io.on('connection', function(socket) {
   // io.emit() for messages to all connections
@@ -29,19 +33,18 @@ io.on('connection', function(socket) {
   sockets[username] = socket;
   const result = dungeon.adminCommand(common.CMD_CREATE_USER, username);
   log(`user ${username}: result:`);
-  console.log(result);
+  log(result);
 
   log(`user ${username}: connected`);
 
   socket.on('disconnect', function() {
     log(`user ${username}: disconnected`);
+    const result = dungeon.adminCommand(common.CMD_DROP_USER, username);
   });
 
   socket.on(messages.COMMAND_MESSAGE, function(msg) {
     log(`user ${username}: ${messages.COMMAND_MESSAGE} received: ${msg}`);
     const result = dungeon.playerCommand(username, msg);
-    log(`user ${username}: result:`);
-    console.log(result);
     sendToUser(username, result);
   });
 });
@@ -61,14 +64,9 @@ function sendToAllUsers(message) {
 function sendToUser(username, message) {
   const socket = sockets[username];
   if (socket) {
-    log(`sendToUser: ${message}`);
+    log('sendToUser: ', message);
     socket.emit(messages.RESPONSE_MESSAGE, message);
   }
-}
-
-
-function log(msg) {
-  console.log(`index.js: ${msg}`);
 }
 
 

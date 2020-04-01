@@ -1,41 +1,53 @@
 
 /* eslint-disable no-console */
 
-const gulp = require('gulp');
+const { src, pipe, dest, series } = require('gulp');
 const eslint = require('gulp-eslint');
 const exec = require('child_process').exec;
 const JS_GLOB = ['**/*.js', '!gulpfile.js', '!out/**', '!static/**'];
 
+/*
 gulp.task('default', ['main']);
+*/
 
-gulp.task('ctags', (callback) => {
+function ctags(cb) {
   exec('ctags --exclude=out --exclude=node_modules', (error, stdout, stderr) => {
-    console.log(`stdout: ${stdout}`);
-    console.log(`stderr: ${stderr}`);
-    return callback(error);
+    //console.log(`stdout: ${stdout}`);
+    //console.log(`stderr: ${stderr}`);
+    return cb(error);
   });
-});
 
-gulp.task('lint', (callback) => {
-  return gulp.src(JS_GLOB)
+  cb();
+}
+
+function lint(cb) {
+  return src(JS_GLOB)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
   ;
-});
 
-gulp.task('main', ['lint', 'ctags'], (callback) => {
+  cb();
+}
+
+function main(cb) {
   // node testDungeon.js
   // node .
 
   exec('node testDungeon.js', (error, stdout, stderr) => {
     console.log(`stdout: ${stdout}`);
     console.log(`stderr: ${stderr}`);
-    return callback(error);
+    return cb(error);
   });
-});
+}
 
+/*
 gulp.task('watch', () =>
   gulp.watch(JS_GLOB, ['main'])
 );
+*/
+
+exports.ctags = ctags;
+exports.lint = lint;
+exports.default = series(ctags, main);
 
