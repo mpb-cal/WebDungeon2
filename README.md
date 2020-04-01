@@ -1,5 +1,7 @@
 
-A Web Based MUD Using Socket.io
+A Web Based MUD (Multi-User Dungeon) Using Socket.io
+
+A throwback to the text-based adventures of the past using modern development tools.
 
 `node index.js` or `node .`
 
