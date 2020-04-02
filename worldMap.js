@@ -108,11 +108,9 @@ function makeRoom(x, y) {
 
 	let bgColor = sprintf( "#%02X%02X%02X", (x-50) * 4, (y-50) * 4, 200 );
 
-	//let desc = `<span style="background-color: ${color}; ">`;
 	let desc = '';
 	typeof d[x][y] !== 'undefined' && (desc += d[x][y]);
-	desc += ` (Location ${roomId})`;
-	//desc += "</span>";
+	//desc += ` (Location ${roomId})`;
 
 	if (typeof rooms[x] === 'undefined') {
     rooms[x] = [];

@@ -4,6 +4,7 @@ const Row = ReactBootstrap.Row;
 const Col = ReactBootstrap.Col;
 const Form = ReactBootstrap.Form;
 const Overlay = ReactBootstrap.Overlay;
+const Button = ReactBootstrap.Button;
 
 function sendCommand(username, password, cmd) {
   socket.emit(messages.COMMAND_MESSAGE, username, password, cmd);
@@ -88,12 +89,15 @@ class GamePanel extends React.Component {
   }
 
   onSubmitCommand(event) {
+    event.preventDefault();
     const cmd = this.state.command;
+    if (cmd === '') {
+      return;
+    }
     this.setState({
       command: '',
     });
     sendCommand(this.username, this.password, cmd);
-    event.preventDefault();
   }
 
   render() {
@@ -108,7 +112,11 @@ class GamePanel extends React.Component {
         </Row>
         <Row noGutters={true}>
           <Col sm={6}>
-            <LocationPanel location_={this.state.location_} bgColor={this.state.bgColor}>
+            <LocationPanel 
+              location_={this.state.location_} 
+              bgColor={this.state.bgColor}
+              doCommand={(cmd) => sendCommand(this.username, this.password, cmd)}
+            >
             </LocationPanel>
           </Col>
           <Col sm={6}>
@@ -129,12 +137,48 @@ class GamePanel extends React.Component {
   }
 }
 
-const LocationPanel = ({location_, bgColor}) => (
-  <div className="location" style={{backgroundColor: bgColor, }}>
-    <h4>
-      Your Location:
-    </h4>
-    {location_}
+const LocationPanel = ({location_, bgColor, doCommand}) => (
+  <div className="location">
+    <Row>
+      <Col xs={2}>
+      </Col>
+      <Col xs={8} id="northButton" className="travelButton text-center"
+        onClick={() => doCommand('north')}
+      >
+        NORTH
+      </Col>
+      <Col xs={2}>
+      </Col>
+    </Row>
+    <Row>
+      <Col xs={2} id="westButton" className="travelButton text-center"
+        onClick={() => doCommand('west')}
+      >
+        WEST
+      </Col>
+      <Col xs={8} style={{backgroundColor: bgColor, }}>
+        <h4>
+          Your Location:
+        </h4>
+        {location_}
+      </Col>
+      <Col xs={2} id="eastButton" className="travelButton text-center"
+        onClick={() => doCommand('east')}
+      >
+        EAST
+      </Col>
+    </Row>
+    <Row>
+      <Col xs={2}>
+      </Col>
+      <Col xs={8} id="southButton" className="travelButton text-center"
+        onClick={() => doCommand('south')}
+      >
+        SOUTH
+      </Col>
+      <Col xs={2}>
+      </Col>
+    </Row>
   </div>
 );
 

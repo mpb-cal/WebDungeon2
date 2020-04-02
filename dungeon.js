@@ -23,6 +23,7 @@ class Dungeon extends EventEmitter {
     switch (command) {
       case common.CMD_RESET_GAME:
         dungeonGame.reset();
+        dungeonGame.createUser('test');
         dungeonGame.createUser('mpb');
         dungeonGame.createUser('martin');
         dungeonGame.createUser('isabel');
