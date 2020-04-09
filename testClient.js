@@ -10,11 +10,10 @@ function sendCommand(cmd) {
   socket.emit(messages.COMMAND_MESSAGE, USERNAME, PASSWORD, cmd);
 }
 
-sendCommand(common.CMD_LOOK);
-sendCommand(common.CMD_CHAT + ' hello from test');
-//socket.emit(messages.COMMAND_MESSAGE, common.CMD_NORTH);
-//socket.emit(messages.COMMAND_MESSAGE, common.CMD_SOUTH);
-//socket.emit(messages.COMMAND_MESSAGE, common.CMD_CHAT + ' I\'m back!');
+sendCommand('\\' + common.CMD_LOOK);
+sendCommand('hello from test');
+sendCommand('\\' + common.CMD_NORTH);
+sendCommand('\\' + common.CMD_SOUTH);
 
 
 socket.on(messages.RESPONSE_MESSAGE, function(msg) {

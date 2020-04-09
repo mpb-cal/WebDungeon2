@@ -21,10 +21,12 @@ class GamePanel extends React.Component {
         name : '',
       },
       messageList: [],
-      occupants: [],
-      location_: '',
-      bgColor: '',
       command: '',
+      room: {
+        description: '',
+        bgColor: '',
+        occupants: [],
+      },
     };
     this.cmdInputRef = React.createRef();
     this.messagePanelRef = React.createRef();
@@ -50,26 +52,32 @@ class GamePanel extends React.Component {
     if (msg) {
       if (msg.error) {
         alert(msg.error);
-      } else if (msg.text) {
+      } 
+      
+      if (msg.text) {
         this.appendMessage({type: 'text', text: msg.text});
-      } else if (msg.chat) {
+      } 
+      
+      if (msg.chat) {
         this.appendMessage({type: 'chat', text: msg.chat});
-      } else if (msg.character) {
+      } 
+      
+      if (msg.player) {
         this.setState({
           character: {
-            name: msg.character.name, 
+            name: msg.player.name, 
           }
         });
-      } else if (msg.room) {
+      } 
+      
+      if (msg.room) {
+        let room = {...msg.room};
+        room.occupants = room.occupants.filter(
+          (e, i, a) => (e.username !== this.state.character.name)
+        );
+
         this.setState({
-          location_: msg.room.description, 
-          bgColor: msg.room.bgColor,
-        });
-      } else if (msg.occupants) {
-        this.setState({
-          occupants: msg.occupants.filter(
-            (e, i, a) => (e.username !== this.state.character.name)
-          ),
+          room
         });
       }
     }
@@ -79,7 +87,7 @@ class GamePanel extends React.Component {
     socket.on(messages.RESPONSE_MESSAGE, this.handleSocket);
     this.cmdInputRef.current.focus();
     // send our 1st command
-    sendCommand(this.username, this.password, 'look');
+    sendCommand(this.username, this.password, '\\look');
   }
 
   onChangeCmdInput(event) {
@@ -100,21 +108,28 @@ class GamePanel extends React.Component {
     sendCommand(this.username, this.password, cmd);
   }
 
+  chatControl() {
+    return (
+      <Form action="" onSubmit={this.onSubmitCommand}>
+        <Form.Group controlId="m">
+          <Form.Row>
+            <Form.Label>Chat: </Form.Label>
+            <Col>
+              <Form.Control type="text" id="m" value={this.state.command} autoComplete="off" ref={this.cmdInputRef} onChange={this.onChangeCmdInput} />
+            </Col>
+          </Form.Row>
+        </Form.Group>
+      </Form>
+    );
+  }
+
   render() {
     return (
       <ReactBootstrap.Container fluid={true}>
-        <Row className="fixed-top">
-          <Col>
-            <Form action="" onSubmit={this.onSubmitCommand}>
-              <Form.Control type="text" id="m" value={this.state.command} autoComplete="off" ref={this.cmdInputRef} onChange={this.onChangeCmdInput} />
-            </Form>
-          </Col>
-        </Row>
         <Row noGutters={true}>
           <Col sm={6}>
             <LocationPanel 
-              location_={this.state.location_} 
-              bgColor={this.state.bgColor}
+              room={this.state.room} 
               doCommand={(cmd) => sendCommand(this.username, this.password, cmd)}
             >
             </LocationPanel>
@@ -122,12 +137,13 @@ class GamePanel extends React.Component {
           <Col sm={6}>
             <CharacterPanel character={this.state.character}>
             </CharacterPanel>
-            <OccupantsPanel occupants={this.state.occupants}>
+            <OccupantsPanel occupants={this.state.room.occupants}>
             </OccupantsPanel>
           </Col>
         </Row>
-        <Row noGutters={true}>
+        <Row noGutters={true} className="pt-3">
           <Col sm={6}>
+            {this.chatControl()}
             <MessagePanel messageList={this.state.messageList} ref={this.messagePanelRef}>
             </MessagePanel>
           </Col>
@@ -137,45 +153,58 @@ class GamePanel extends React.Component {
   }
 }
 
-const LocationPanel = ({location_, bgColor, doCommand}) => (
+const TravelButton = ({col, isOpen, onClick, text}) => (
+  <Col xs={col} className="travelButton text-center"
+    disabled={!isOpen}
+    onClick={isOpen ? onClick : null}
+  >
+    {text}
+  </Col>
+);
+
+const LocationPanel = ({room, doCommand}) => (
   <div className="location">
     <Row>
       <Col xs={2}>
       </Col>
-      <Col xs={8} id="northButton" className="travelButton text-center"
-        onClick={() => doCommand('north')}
-      >
-        NORTH
-      </Col>
+      <TravelButton
+        col={8}
+        isOpen={room.northDoor === 'open'}
+        onClick={() => doCommand("\\north")}
+        text="NORTH"
+      />
       <Col xs={2}>
       </Col>
     </Row>
     <Row>
-      <Col xs={2} id="westButton" className="travelButton text-center"
-        onClick={() => doCommand('west')}
-      >
-        WEST
-      </Col>
-      <Col xs={8} style={{backgroundColor: bgColor, }}>
+      <TravelButton
+        col={2}
+        isOpen={room.westDoor === 'open'}
+        onClick={() => doCommand("\\west")}
+        text="WEST"
+      />
+      <Col xs={8} style={{backgroundColor: room.bgColor, }}>
         <h4>
           Your Location:
         </h4>
-        {location_}
+        {room.description}
       </Col>
-      <Col xs={2} id="eastButton" className="travelButton text-center"
-        onClick={() => doCommand('east')}
-      >
-        EAST
-      </Col>
+      <TravelButton
+        col={2}
+        isOpen={room.eastDoor === 'open'}
+        onClick={() => doCommand("\\east")}
+        text="EAST"
+      />
     </Row>
     <Row>
       <Col xs={2}>
       </Col>
-      <Col xs={8} id="southButton" className="travelButton text-center"
-        onClick={() => doCommand('south')}
-      >
-        SOUTH
-      </Col>
+      <TravelButton
+        col={8}
+        isOpen={room.southDoor === 'open'}
+        onClick={() => doCommand("\\south")}
+        text="SOUTH"
+      />
       <Col xs={2}>
       </Col>
     </Row>

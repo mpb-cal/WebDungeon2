@@ -31,6 +31,7 @@ class Dungeon extends EventEmitter {
         return common.RESP_OK;
         break;
 
+/*
       case common.CMD_CREATE_USER:
         {
           const username = params[0];
@@ -41,13 +42,6 @@ class Dungeon extends EventEmitter {
           }
 
           dungeonGame.createUser(username);
-/*
-          const user = dungeonGame.getUserByName(username);
-
-          this.sendUpdateToUser(username, {character: {name: username, }});
-          this.sendUpdateToRoom(user.x, user.y, {text: `${username} enters the game.`}, [username] );
-          this.sendUpdateToRoom(user.x, user.y, getAllOccupants(user.x, user.y));
-*/
 
           return common.RESP_OK;
         }
@@ -74,12 +68,12 @@ class Dungeon extends EventEmitter {
 
           this.sendUpdateToRoom(user.x, user.y, {text: `${username} leaves the game.`}, [username]);
           this.sendUpdateToRoom(user.x, user.y, getAllOccupants(user.x, user.y));
-          //this.sendUpdateToRoom(user.x, user.y, getOtherOccupants(user.x, user.y, username), [username]);
 
           return common.RESP_OK;
         }
 
         break;
+*/
 
       default:
         return {
@@ -185,6 +179,7 @@ class Dungeon extends EventEmitter {
   */
   }
 
+  // commands should start with backslash; otherwise they will be treated as chat messages
   playerCommand(username, commandMessage) {
     log(`playerCommand: ${username}, ${commandMessage}`);
 
@@ -209,11 +204,22 @@ class Dungeon extends EventEmitter {
       params = parts.slice(1);
     }
 
+    // look for backslash
+    const m = command.match(/^\\(.*)$/);
+    if (m !== 'undefined' && m !== null) {
+      command = m[1];
+    } else{
+      //const chat = username + ': ' + params.join(' ');
+      const chat = username + ': ' + parts.join(' ');
+      this.sendUpdateToRoom( user.x, user.y, {chat} );
+      return;
+    }
+
     switch (command) {
       case common.CMD_LOOK:
-        this.sendUpdateToUser(username, {character: {name: username, }});
+        //this.sendUpdateToUser(username, {character: {name: username, }});
         this.sendUpdateToUser(username, dungeonGame.getPlayersView(username));
-        this.sendUpdateToUser(username, getAllOccupants(user.x, user.y));
+        //this.sendUpdateToUser(username, getAllOccupants(user.x, user.y));
         break;
 
       case common.CMD_WORLD_MAP:
@@ -227,11 +233,6 @@ class Dungeon extends EventEmitter {
         return {
           name: char,
         };
-        break;
-
-      case common.CMD_CHAT:
-        const chat = username + ': ' + params.join(' ');
-        this.sendUpdateToRoom( user.x, user.y, {chat} );
         break;
 
       case common.CMD_NORTH:
@@ -271,23 +272,17 @@ class Dungeon extends EventEmitter {
             {text: username + ' exits ' + EXITS_TO[command]},
             [username]
           );
-          this.sendUpdateToRoom(oldX, oldY, getAllOccupants(oldX, oldY));
-          //this.sendUpdateToRoom(oldX, oldY, getOtherOccupants(oldX, oldY, username), [username]);
-          //this.sendUpdateToRoom( oldX, oldY, printNPCs( oldX, oldY ) );
+          this.sendUpdateToRoom(oldX, oldY, dungeonGame.getRoomState(oldX, oldY));
 
           this.sendUpdateToRoom(
             newX,
             newY,
-            {text: username + ' enters from the ' + ENTERS_FROM[command]}
-            ,
+            {text: username + ' enters from the ' + ENTERS_FROM[command]},
             [username]
           );
-          this.sendUpdateToRoom(newX, newY, getAllOccupants(newX, newY));
-          //this.sendUpdateToRoom(newX, newY, getOtherOccupants(newX, newY, username), [username]);
-          //this.sendUpdateToRoom( newX, newY, printNPCs( newX, newY ) );
+          this.sendUpdateToRoom(newX, newY, dungeonGame.getRoomState(newX, newY));
 
-          const playersView = dungeonGame.getPlayersView(username);
-          return playersView;
+          return dungeonGame.getPlayersView(username);
         } else {
           return {
             error: 'blocked',
@@ -302,16 +297,6 @@ class Dungeon extends EventEmitter {
     }
 
   /*
-    if (command == common.CMD_LOOK) {
-    } else if (command == common.CMD_WORLD_MAP) {
-    } else if (command == common.CMD_CHAR_DETAILS) {
-    } else if (command == common.CMD_CHAT) {
-    } else if (
-      command == common.CMD_NORTH ||
-      command == common.CMD_SOUTH ||
-      command == common.CMD_EAST ||
-      command == common.CMD_WEST)
-    {
     elseif (command == 'setPosition')
     {
       $r_userX = $params[0];

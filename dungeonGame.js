@@ -132,7 +132,7 @@ function getPlayersView(username) {
 
   return {
     room: getRoomState(user.x, user.y),
-    //player: printPlayer(username, user.x, user.y )
+    player: printPlayer(username, user.x, user.y)
   };
 }
 
@@ -154,8 +154,12 @@ function getRoomState(x, y) {
     description: (typeof room === 'undefined' ? '' : room.description),
     items: (typeof room === 'undefined' ? '' : room.items),
     bgColor: (typeof room === 'undefined' ? '' : room.bgColor),
-    //occupants: getOccupants(x, y),
+    occupants: getOccupants(x, y),
     npcs: getNPCs(x, y),
+    northDoor: (canTravel(x, y, 'north') ? 'open' : 'closed'),
+    southDoor: (canTravel(x, y, 'south') ? 'open' : 'closed'),
+    eastDoor: (canTravel(x, y, 'east') ? 'open' : 'closed'),
+    westDoor: (canTravel(x, y, 'west') ? 'open' : 'closed'),
   };
 }
 
@@ -214,7 +218,48 @@ function canTravel(fromX, fromY, direction) {
   return false;
 }
 
+function printPlayer(username) {
+  return {
+    name: username,
+    //printUser( $username ) .
 /*
+    "<inventory>" . printInventory( $username ) . "</inventory>" .
+    "<northVisibility>" . (canTravel( $x, $y, 'north' ) ? 'visible' : 'hidden') . "</northVisibility>" .
+    "<southVisibility>" . (canTravel( $x, $y, 'south' ) ? 'visible' : 'hidden') . "</southVisibility>" .
+    "<eastVisibility>" . (canTravel( $x, $y, 'east' ) ? 'visible' : 'hidden') . "</eastVisibility>" .
+    "<westVisibility>" . (canTravel( $x, $y, 'west' ) ? 'visible' : 'hidden') . "</westVisibility>";
+*/
+  };
+}
+
+/*
+function printInventory( $username ) {
+  global $m_users;
+
+  $text = '';
+
+  $inv = $m_users[$username]['inventory'];
+
+  if ($inv) foreach ($inv as $i)
+  {
+    if ($i) $text .= "<item>$i</item>";
+  }
+
+  return $text;
+}
+
+function printUser( $username ) {
+  global $m_users;
+
+  $x = $m_users[$username]['x'];
+  $y = $m_users[$username]['y'];
+  $health = $m_users[$username]['health'];
+
+  $text = "<user x=\"$x\" y=\"$y\" health=\"$health\">$username</user>";
+
+  return $text;
+}
+
 function saveDoors() {
   util.writeJSONFile(DOORS_JSON, m_doors);
 }
@@ -249,45 +294,6 @@ function sendUpdateToRoom( $x, $y, $update ) {
   {
     sendUpdateTo( $username, $update );
   }
-}
-
-function printInventory( $username ) {
-  global $m_users;
-
-  $text = '';
-
-  $inv = $m_users[$username]['inventory'];
-
-  if ($inv) foreach ($inv as $i)
-  {
-    if ($i) $text .= "<item>$i</item>";
-  }
-
-  return $text;
-}
-
-function printPlayer( $username, $x, $y ) {
-  $text = 
-    printUser( $username ) .
-    "<inventory>" . printInventory( $username ) . "</inventory>" .
-    "<northVisibility>" . (canTravel( $x, $y, 'north' ) ? 'visible' : 'hidden') . "</northVisibility>" .
-    "<southVisibility>" . (canTravel( $x, $y, 'south' ) ? 'visible' : 'hidden') . "</southVisibility>" .
-    "<eastVisibility>" . (canTravel( $x, $y, 'east' ) ? 'visible' : 'hidden') . "</eastVisibility>" .
-    "<westVisibility>" . (canTravel( $x, $y, 'west' ) ? 'visible' : 'hidden') . "</westVisibility>";
-
-  return $text;
-}
-
-function printUser( $username ) {
-  global $m_users;
-
-  $x = $m_users[$username]['x'];
-  $y = $m_users[$username]['y'];
-  $health = $m_users[$username]['health'];
-
-  $text = "<user x=\"$x\" y=\"$y\" health=\"$health\">$username</user>";
-
-  return $text;
 }
 
 function cmdRooms() {
@@ -479,5 +485,6 @@ module.exports = {
   getOccupants,
   getOccupantNames,
   getWorldMap,
+  getRoomState
 };
 
