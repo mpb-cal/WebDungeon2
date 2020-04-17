@@ -1,7 +1,6 @@
 
 module.exports = {
   RESP_OK: 'ok',
-  CMD_RESET_GAME: 'resetGame',
   CMD_CREATE_USER: 'createUser',
   CMD_DROP_USER: 'dropUser',
   CMD_LOOK: 'look',

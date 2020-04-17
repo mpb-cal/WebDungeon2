@@ -11,7 +11,7 @@ gulp.task('default', ['main']);
 */
 
 function ctags(cb) {
-  exec('ctags --exclude=out --exclude=node_modules', (error, stdout, stderr) => {
+  exec('ctags --exclude=out', (error, stdout, stderr) => {
     //console.log(`stdout: ${stdout}`);
     //console.log(`stderr: ${stderr}`);
     return cb(error);

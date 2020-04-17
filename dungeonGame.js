@@ -221,44 +221,12 @@ function canTravel(fromX, fromY, direction) {
 function printPlayer(username) {
   return {
     name: username,
-    //printUser( $username ) .
-/*
-    "<inventory>" . printInventory( $username ) . "</inventory>" .
-    "<northVisibility>" . (canTravel( $x, $y, 'north' ) ? 'visible' : 'hidden') . "</northVisibility>" .
-    "<southVisibility>" . (canTravel( $x, $y, 'south' ) ? 'visible' : 'hidden') . "</southVisibility>" .
-    "<eastVisibility>" . (canTravel( $x, $y, 'east' ) ? 'visible' : 'hidden') . "</eastVisibility>" .
-    "<westVisibility>" . (canTravel( $x, $y, 'west' ) ? 'visible' : 'hidden') . "</westVisibility>";
-*/
+    health: m_users[username].health,
+    inventory: m_users[username].inventory,
   };
 }
 
 /*
-function printInventory( $username ) {
-  global $m_users;
-
-  $text = '';
-
-  $inv = $m_users[$username]['inventory'];
-
-  if ($inv) foreach ($inv as $i)
-  {
-    if ($i) $text .= "<item>$i</item>";
-  }
-
-  return $text;
-}
-
-function printUser( $username ) {
-  global $m_users;
-
-  $x = $m_users[$username]['x'];
-  $y = $m_users[$username]['y'];
-  $health = $m_users[$username]['health'];
-
-  $text = "<user x=\"$x\" y=\"$y\" health=\"$health\">$username</user>";
-
-  return $text;
-}
 
 function saveDoors() {
   util.writeJSONFile(DOORS_JSON, m_doors);

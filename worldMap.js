@@ -99,12 +99,11 @@ function makeRoom(x, y) {
 	if (x < 1 || x > 200 || y < 1 || y > 200)
 		return;
 
-	let items = '';
-	if (Math.random() * 10 == 0) items += `gold_${roomId},`;
-	if (Math.random() * 10 == 0) items += `scroll_${roomId},`;
-	if (Math.random() * 10 == 0) items += `shield_${roomId},`;
-	if (Math.random() * 10 == 0) items += `dagger_${roomId},`;
-	items.replace(/,$/, '');
+	let items = [];
+	if (Math.random() * 10 < 1) items.push({ name: `gold_${roomId}`, });
+	if (Math.random() * 10 < 1) items.push({ name: `scroll_${roomId}`, });
+	if (Math.random() * 10 < 1) items.push({ name: `shield_${roomId}`, });
+	if (Math.random() * 10 < 1) items.push({ name: `dagger_${roomId}`, });
 
 	let bgColor = sprintf( "#%02X%02X%02X", (x-50) * 4, (y-50) * 4, 200 );
 

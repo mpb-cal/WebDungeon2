@@ -26,6 +26,7 @@ class GamePanel extends React.Component {
         description: '',
         bgColor: '',
         occupants: [],
+        items: [],
       },
     };
     this.cmdInputRef = React.createRef();
@@ -139,6 +140,8 @@ class GamePanel extends React.Component {
             </CharacterPanel>
             <OccupantsPanel occupants={this.state.room.occupants}>
             </OccupantsPanel>
+            <ItemsPanel items={this.state.room.items}>
+            </ItemsPanel>
           </Col>
         </Row>
         <Row noGutters={true} className="pt-3">
@@ -271,6 +274,41 @@ class Occupant extends React.Component {
             </div>
           )}
         </Overlay>
+      </div>
+    );
+  }
+}
+
+const ItemsPanel = ({items}) => (
+  <div className="items">
+    <h4>
+      Items Here:
+    </h4>
+    {items.map((e,i) => (
+      <Item key={i} item={e}></Item>
+    ))}
+  </div>
+);
+
+class Item extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showTooltip: false,
+    };
+    this.target = React.createRef();
+  }
+
+  render() {
+    return (
+      <div>
+        <span 
+          onMouseOver={() => {this.setState({showTooltip: true})}} 
+          onMouseOut={() => {this.setState({showTooltip: false})}} 
+          ref={this.target}
+        >
+          {this.props.item.name}
+        </span>
       </div>
     );
   }

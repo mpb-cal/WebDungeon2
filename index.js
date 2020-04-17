@@ -22,7 +22,6 @@ function log(...args) {
 // socket.emit() for messages to socket only
 
 function sendToAllUsers(message) {
-  //log(`sendToAllUsers: ${message}`);
   io.emit(messages.RESPONSE_MESSAGE, message);
 }
 
@@ -35,12 +34,8 @@ function sendToUser(username, message) {
 }
 
 app.use(express.static('static'));
-const dungeon = new Dungeon;
-dungeon.adminCommand(common.CMD_RESET_GAME); // mpb! misspelled not caught
 
-// handle Dungeon events
-dungeon.on(Dungeon.SEND_TO_ALL_USERS, sendToAllUsers);
-dungeon.on(Dungeon.SEND_TO_USER, sendToUser);
+const dungeon = new Dungeon(sendToAllUsers, sendToUser);
 
 io.on('connection', (socket) => {
   // handle incoming connection
