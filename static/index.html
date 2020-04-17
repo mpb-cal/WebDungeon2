@@ -12,10 +12,9 @@
 		<title>Web Dungeon 2</title>
 		<style>
       body {
-        padding-top: 35px;
       }
 
-      #items {
+      .items {
         background-color: #eae;
       }
 
@@ -26,7 +25,7 @@
 
       .messages {
         background-color: lightcyan;
-        height: 70vh;
+        height: 65vh;
         overflow: auto;
       }
 
@@ -49,6 +48,17 @@
       .occupantTooltip {
         background-color: powderblue;
       }
+
+      .travelButton {
+        background-color: #0069d9;
+        cursor: pointer;
+      }
+
+      .travelButton[disabled] {
+        background-color: gray;
+        cursor: default;
+      }
+
 		</style>
 	</head>
 

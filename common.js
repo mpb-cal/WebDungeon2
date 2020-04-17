@@ -1,8 +1,6 @@
 
 module.exports = {
   RESP_OK: 'ok',
-  TEST_USER: 'test_user',
-  CMD_RESET_GAME: 'resetGame',
   CMD_CREATE_USER: 'createUser',
   CMD_DROP_USER: 'dropUser',
   CMD_LOOK: 'look',
@@ -11,8 +9,7 @@ module.exports = {
   CMD_EAST: 'east',
   CMD_WEST: 'west',
   CMD_CHAR_DETAILS: 'charDetails',
-  CMD_WORLD_MAP: 'map',
-  CMD_CHAT: 'chat',
+  CMD_WORLD_MAP: 'map'
 };
 
 

@@ -22,7 +22,6 @@ function log(...args) {
 // socket.emit() for messages to socket only
 
 function sendToAllUsers(message) {
-  //log(`sendToAllUsers: ${message}`);
   io.emit(messages.RESPONSE_MESSAGE, message);
 }
 
@@ -35,12 +34,8 @@ function sendToUser(username, message) {
 }
 
 app.use(express.static('static'));
-const dungeon = new Dungeon;
-dungeon.adminCommand(common.CMD_RESET_GAME); // mpb! misspelled not caught
 
-// handle Dungeon events
-dungeon.on(Dungeon.SEND_TO_ALL_USERS, sendToAllUsers);
-dungeon.on(Dungeon.SEND_TO_USER, sendToUser);
+const dungeon = new Dungeon(sendToAllUsers, sendToUser);
 
 io.on('connection', (socket) => {
   // handle incoming connection
@@ -53,8 +48,6 @@ io.on('connection', (socket) => {
     username: ''
   });
 
-  //dungeon.adminCommand(common.CMD_CREATE_USER, socketId);
-
   // start receiving commands from client
   socket.on(messages.COMMAND_MESSAGE, (username, password, cmd) => {
     log(`socket ${socket.id}, user ${username}: COMMAND_MESSAGE received: ${cmd}`);
@@ -64,16 +57,15 @@ io.on('connection', (socket) => {
     m_sockets[idx].username = username;
 
     const result = dungeon.playerCommand(username, cmd);
+    log('result: ', result);
     sendToUser(username, result);
   });
 
   // handle client disconnect
   socket.on('disconnect', () => {
     log(`user disconnected on ${socket.id}`);
-    const idx = m_sockets.findIndex((e) => e.socket.id === socket.id)
-    if (idx >=0) {
-      //dungeon.adminCommand(common.CMD_DROP_USER, m_sockets[idx].username);
-    }
+    // remove this socket from our list
+    m_sockets = m_sockets.filter((e) => e.socket.id !== socket.id)
   });
 });
 

@@ -7,8 +7,6 @@ const socket = io('http://localhost:5500');
 const messages = require('./static/messages');
 const common = require('./common');
 
-//socket.emit(messages.COMMAND_MESSAGE, common.CMD_CHAT + ' I\'m back!');
-
 
 socket.on(messages.RESPONSE_MESSAGE, function(msg) {
   //console.log("socket message: ", msg);
@@ -49,7 +47,7 @@ async function runNPCs() {
 
     default:
       //sendCommand( "$name ping" );
-      socket.emit(messages.COMMAND_MESSAGE, common.CMD_CHAT + ' Hello from a bot');
+      socket.emit(messages.COMMAND_MESSAGE, 'Hello from a bot');
       break;
     }
 

@@ -4,6 +4,7 @@ const Row = ReactBootstrap.Row;
 const Col = ReactBootstrap.Col;
 const Form = ReactBootstrap.Form;
 const Overlay = ReactBootstrap.Overlay;
+const Button = ReactBootstrap.Button;
 
 function sendCommand(username, password, cmd) {
   socket.emit(messages.COMMAND_MESSAGE, username, password, cmd);
@@ -20,10 +21,13 @@ class GamePanel extends React.Component {
         name : '',
       },
       messageList: [],
-      occupants: [],
-      location_: '',
-      bgColor: '',
       command: '',
+      room: {
+        description: '',
+        bgColor: '',
+        occupants: [],
+        items: [],
+      },
     };
     this.cmdInputRef = React.createRef();
     this.messagePanelRef = React.createRef();
@@ -49,26 +53,32 @@ class GamePanel extends React.Component {
     if (msg) {
       if (msg.error) {
         alert(msg.error);
-      } else if (msg.text) {
+      } 
+      
+      if (msg.text) {
         this.appendMessage({type: 'text', text: msg.text});
-      } else if (msg.chat) {
+      } 
+      
+      if (msg.chat) {
         this.appendMessage({type: 'chat', text: msg.chat});
-      } else if (msg.character) {
+      } 
+      
+      if (msg.player) {
         this.setState({
           character: {
-            name: msg.character.name, 
+            name: msg.player.name, 
           }
         });
-      } else if (msg.room) {
+      } 
+      
+      if (msg.room) {
+        let room = {...msg.room};
+        room.occupants = room.occupants.filter(
+          (e, i, a) => (e.username !== this.state.character.name)
+        );
+
         this.setState({
-          location_: msg.room.description, 
-          bgColor: msg.room.bgColor,
-        });
-      } else if (msg.occupants) {
-        this.setState({
-          occupants: msg.occupants.filter(
-            (e, i, a) => (e.username !== this.state.character.name)
-          ),
+          room
         });
       }
     }
@@ -78,7 +88,7 @@ class GamePanel extends React.Component {
     socket.on(messages.RESPONSE_MESSAGE, this.handleSocket);
     this.cmdInputRef.current.focus();
     // send our 1st command
-    sendCommand(this.username, this.password, 'look');
+    sendCommand(this.username, this.password, '\\look');
   }
 
   onChangeCmdInput(event) {
@@ -88,38 +98,55 @@ class GamePanel extends React.Component {
   }
 
   onSubmitCommand(event) {
+    event.preventDefault();
     const cmd = this.state.command;
+    if (cmd === '') {
+      return;
+    }
     this.setState({
       command: '',
     });
     sendCommand(this.username, this.password, cmd);
-    event.preventDefault();
+  }
+
+  chatControl() {
+    return (
+      <Form action="" onSubmit={this.onSubmitCommand}>
+        <Form.Group controlId="m">
+          <Form.Row>
+            <Form.Label>Chat: </Form.Label>
+            <Col>
+              <Form.Control type="text" id="m" value={this.state.command} autoComplete="off" ref={this.cmdInputRef} onChange={this.onChangeCmdInput} />
+            </Col>
+          </Form.Row>
+        </Form.Group>
+      </Form>
+    );
   }
 
   render() {
     return (
       <ReactBootstrap.Container fluid={true}>
-        <Row className="fixed-top">
-          <Col>
-            <Form action="" onSubmit={this.onSubmitCommand}>
-              <Form.Control type="text" id="m" value={this.state.command} autoComplete="off" ref={this.cmdInputRef} onChange={this.onChangeCmdInput} />
-            </Form>
-          </Col>
-        </Row>
         <Row noGutters={true}>
           <Col sm={6}>
-            <LocationPanel location_={this.state.location_} bgColor={this.state.bgColor}>
+            <LocationPanel 
+              room={this.state.room} 
+              doCommand={(cmd) => sendCommand(this.username, this.password, cmd)}
+            >
             </LocationPanel>
           </Col>
           <Col sm={6}>
             <CharacterPanel character={this.state.character}>
             </CharacterPanel>
-            <OccupantsPanel occupants={this.state.occupants}>
+            <OccupantsPanel occupants={this.state.room.occupants}>
             </OccupantsPanel>
+            <ItemsPanel items={this.state.room.items}>
+            </ItemsPanel>
           </Col>
         </Row>
-        <Row noGutters={true}>
+        <Row noGutters={true} className="pt-3">
           <Col sm={6}>
+            {this.chatControl()}
             <MessagePanel messageList={this.state.messageList} ref={this.messagePanelRef}>
             </MessagePanel>
           </Col>
@@ -129,12 +156,61 @@ class GamePanel extends React.Component {
   }
 }
 
-const LocationPanel = ({location_, bgColor}) => (
-  <div className="location" style={{backgroundColor: bgColor, }}>
-    <h4>
-      Your Location:
-    </h4>
-    {location_}
+const TravelButton = ({col, isOpen, onClick, text}) => (
+  <Col xs={col} className="travelButton text-center"
+    disabled={!isOpen}
+    onClick={isOpen ? onClick : null}
+  >
+    {text}
+  </Col>
+);
+
+const LocationPanel = ({room, doCommand}) => (
+  <div className="location">
+    <Row>
+      <Col xs={2}>
+      </Col>
+      <TravelButton
+        col={8}
+        isOpen={room.northDoor === 'open'}
+        onClick={() => doCommand("\\north")}
+        text="NORTH"
+      />
+      <Col xs={2}>
+      </Col>
+    </Row>
+    <Row>
+      <TravelButton
+        col={2}
+        isOpen={room.westDoor === 'open'}
+        onClick={() => doCommand("\\west")}
+        text="WEST"
+      />
+      <Col xs={8} style={{backgroundColor: room.bgColor, }}>
+        <h4>
+          Your Location:
+        </h4>
+        {room.description}
+      </Col>
+      <TravelButton
+        col={2}
+        isOpen={room.eastDoor === 'open'}
+        onClick={() => doCommand("\\east")}
+        text="EAST"
+      />
+    </Row>
+    <Row>
+      <Col xs={2}>
+      </Col>
+      <TravelButton
+        col={8}
+        isOpen={room.southDoor === 'open'}
+        onClick={() => doCommand("\\south")}
+        text="SOUTH"
+      />
+      <Col xs={2}>
+      </Col>
+    </Row>
   </div>
 );
 
@@ -198,6 +274,41 @@ class Occupant extends React.Component {
             </div>
           )}
         </Overlay>
+      </div>
+    );
+  }
+}
+
+const ItemsPanel = ({items}) => (
+  <div className="items">
+    <h4>
+      Items Here:
+    </h4>
+    {items.map((e,i) => (
+      <Item key={i} item={e}></Item>
+    ))}
+  </div>
+);
+
+class Item extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showTooltip: false,
+    };
+    this.target = React.createRef();
+  }
+
+  render() {
+    return (
+      <div>
+        <span 
+          onMouseOver={() => {this.setState({showTooltip: true})}} 
+          onMouseOut={() => {this.setState({showTooltip: false})}} 
+          ref={this.target}
+        >
+          {this.props.item.name}
+        </span>
       </div>
     );
   }
