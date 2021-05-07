@@ -6,7 +6,7 @@
     "express": "^4.10.2",
     "socket.io": "^1.7.4",
     "sprintf-js": "^1.1.2",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   },
   "scripts": {
     "start": "gulp"
